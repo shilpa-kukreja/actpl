@@ -95,7 +95,7 @@ export default function Navbar() {
             {/* LOGO */}
             <div className="flex items-center">
               <Link href="/">
-                <img src="https://airpackcompressor.com/wp-content/uploads/2024/05/ACT.png" className="h-12 w-auto" />
+                <img src="/logo.png" className="h-12 w-auto" />
               </Link>
             </div>
 
