@@ -1,15 +1,12 @@
-
-
 "use client";
 
 import { X, Loader2, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function EnquirySideModal({ products = [] }) {
+export default function EnquirySideModal() {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
-    productName: "",
     name: "",
     email: "",
     phone: "",
@@ -50,7 +47,6 @@ export default function EnquirySideModal({ products = [] }) {
       });
       
       setFormData({
-        productName: "",
         name: "",
         email: "",
         phone: "",
@@ -144,7 +140,7 @@ export default function EnquirySideModal({ products = [] }) {
               <div
                 className={`mb-4 p-3 rounded-lg flex items-center gap-2 text-sm
                   ${message.type === "success" 
-                    ? "bg-green-50 text-green-700 border border-green-200" 
+                    ? "bg-green-50 text-green-700 border border-red-200" 
                     : "bg-red-50 text-red-700 border border-red-200"
                   }`}
               >
@@ -205,7 +201,7 @@ export default function EnquirySideModal({ products = [] }) {
                   className={`w-full px-3 py-2 rounded-lg
                     border transition-all duration-200
                     ${focusedField === "name"
-                      ? "border-[#1e8a25] ring-2 ring-[#1e8a25]/30" 
+                      ? "border-red-700 ring-2 ring-[#1e8a25]/1" 
                       : "border-gray-300 hover:border-gray-400"
                     }
                     bg-gray-50 focus:bg-white
@@ -230,7 +226,7 @@ export default function EnquirySideModal({ products = [] }) {
                   className={`w-full px-3 py-2 rounded-lg
                     border transition-all duration-200
                     ${focusedField === "email"
-                      ? "border-[#1e8a25] ring-2 ring-[#1e8a25]/30" 
+                      ? "border-red-600 ring-2 ring-[#1e8a25]/1" 
                       : "border-gray-300 hover:border-gray-400"
                     }
                     bg-gray-50 focus:bg-white
@@ -255,7 +251,7 @@ export default function EnquirySideModal({ products = [] }) {
                   className={`w-full px-3 py-2 rounded-lg
                     border transition-all duration-200
                     ${focusedField === "phone"
-                      ? "border-[#1e8a25] ring-2 ring-[#1e8a25]/30" 
+                      ? "border-red-600 ring-2 ring-[#1e8a25]/1" 
                       : "border-gray-300 hover:border-gray-400"
                     }
                     bg-gray-50 focus:bg-white
@@ -280,7 +276,7 @@ export default function EnquirySideModal({ products = [] }) {
                   className={`w-full px-3 py-2 rounded-lg
                     border transition-all duration-200 resize-none
                     ${focusedField === "requirement"
-                      ? "border-[#1e8a25] ring-2 ring-[#1e8a25]/30" 
+                      ? "border-red-600 ring-2 ring-[#1e8a25]/1" 
                       : "border-gray-300 hover:border-gray-400"
                     }
                     bg-gray-50 focus:bg-white
@@ -294,8 +290,8 @@ export default function EnquirySideModal({ products = [] }) {
                 disabled={loading}
                 className="w-full mt-6 bg-red-600
                   text-white font-semibold py-3 px-4 rounded-lg
-                  hover:from-[#1e8a25] 
-                  focus:outline-none focus:ring-2 focus:ring-[#1e8a25] focus:ring-offset-2
+                  hover:from-red-700
+                  focus:outline-none focus:ring-2 focus:ring-[#e62012] focus:ring-offset-2
                   disabled:opacity-50 disabled:cursor-not-allowed
                   transition-all duration-200
                   flex items-center justify-center gap-2"

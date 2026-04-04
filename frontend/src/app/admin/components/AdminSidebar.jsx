@@ -21,24 +21,24 @@ export default function AdminSidebar() {
 
   const navItems = [
     { href: "/admin/dashboard", label: "Dashboard", icon: FiHome, group: "main" },
-    { 
-      href: "/admin/add-categories", 
-      label: "Categories", 
-      icon: FiLayers, 
-      group: "catalog" 
-    },
-    { 
-      href: "/admin/add-products", 
-      label: "Add Product", 
-      icon: FiPackage, 
-      group: "catalog" 
-    },
-    { 
-      href: "/admin/list-products", 
-      label: "Products", 
-      icon: FiGrid, 
-      group: "catalog" 
-    },
+    // { 
+    //   href: "/admin/add-categories", 
+    //   label: "Categories", 
+    //   icon: FiLayers, 
+    //   group: "catalog" 
+    // },
+    // { 
+    //   href: "/admin/add-products", 
+    //   label: "Add Product", 
+    //   icon: FiPackage, 
+    //   group: "catalog" 
+    // },
+    // { 
+    //   href: "/admin/list-products", 
+    //   label: "Products", 
+    //   icon: FiGrid, 
+    //   group: "catalog" 
+    // },
     { 
       href: "/admin/add-banner", 
       label: "Banners", 
@@ -99,12 +99,12 @@ export default function AdminSidebar() {
       {/* Logo & Brand Section */}
       <div className="p-6 border-b border-gray-700/50">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#a13045] to-[#c23b54] rounded-lg flex items-center justify-center shadow-lg">
+          <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center shadow-lg">
             <FiUsers className="w-6 h-6 text-white" />
           </div>
           <div>
             <h2 className="text-xl font-bold tracking-tight">
-              Admin<span className="text-[#a13045]">Hub</span>
+              Admin<span className="text-red-600">Hub</span>
             </h2>
             <p className="text-xs text-gray-400 mt-0.5">Content Management</p>
           </div>
@@ -135,7 +135,7 @@ export default function AdminSidebar() {
                         flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium
                         transition-all duration-200 ease-in-out
                         ${isActive 
-                          ? "bg-gradient-to-r from-[#a13045] to-[#b3364d] text-white shadow-lg shadow-[#a13045]/20" 
+                          ? "bg-red-600 text-white shadow-lg shadow-[#a13045]/20" 
                           : "text-gray-300 hover:bg-gray-800/60 hover:text-white"
                         }
                       `}
@@ -165,7 +165,7 @@ export default function AdminSidebar() {
       <div className="p-4 border-t border-gray-700/50 bg-gray-800/30">
         <div className="px-4 py-3 rounded-xl bg-gray-800/50 backdrop-blur-sm">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center">
               <span className="text-sm font-bold text-white">A</span>
             </div>
             <div className="flex-1 min-w-0">

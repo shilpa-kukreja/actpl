@@ -1,11 +1,6 @@
 import mongoose from 'mongoose';
 
 const enquirySchema = new mongoose.Schema({
-  productName: {
-    type: String,
-    required: [true, 'Product name is required'],
-    trim: true
-  },
   name: {
     type: String,
     required: [true, 'Name is required'],

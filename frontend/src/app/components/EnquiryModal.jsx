@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import axios from "axios";
 
-export default function EnquiryModal({ isOpen, onClose, productName }) {
+export default function EnquiryModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,11 +55,7 @@ export default function EnquiryModal({ isOpen, onClose, productName }) {
 
     try {
       const response = await axios.post(
-        `${API_BASE_URL}/api/enquiries`,
-        {
-          productName,
-          ...formData
-        }
+        `${API_BASE_URL}/api/enquiries`,formData
       );
      
       if (response.data.success) {
@@ -134,12 +130,7 @@ export default function EnquiryModal({ isOpen, onClose, productName }) {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            value={productName}
-            disabled
-            className="w-full border rounded-lg px-4 py-2 bg-gray-100 text-gray-600 cursor-not-allowed"
-          />
+         
 
           <div>
             <input
@@ -192,7 +183,7 @@ export default function EnquiryModal({ isOpen, onClose, productName }) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-[#1e8a25] hover:bg-[#1e8a25]  text-white py-3 rounded-lg font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            className="w-full bg-red-600 hover:bg-red-700  text-white py-3 rounded-lg font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
           >
             {loading ? (
               <>

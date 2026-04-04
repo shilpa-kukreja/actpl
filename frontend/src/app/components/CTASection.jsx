@@ -1,9 +1,17 @@
 "use client";
+import { useState } from "react";
+import EnquirySideModal from "./EnquiryModal";
+
 
 import { PhoneCall, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function CTASection() {
+
+    const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  
+
+  
   return (
     <section className="py-10 bg-white relative overflow-hidden">
 
@@ -52,7 +60,12 @@ export default function CTASection() {
 
               {/* Request Quote */}
               <Link href="/request-quote">
-                <button className="group border border-white px-2 sm:px-8 py-4 bg-gray-200 rounded-md font-semibold flex items-center gap-2  hover:text-blue-700 transition">
+                <button 
+                 onClick={() => {
+              setIsMenuOpen(false);
+              setIsEnquiryOpen(true);
+            }}
+                className="group border border-white px-2 sm:px-8 py-4 bg-gray-200 rounded-md font-semibold flex items-center gap-2  hover:text-blue-700 transition">
                   Request Quote
                   <ArrowRight
                     size={18}
@@ -65,6 +78,12 @@ export default function CTASection() {
           </div>
         </div>
       </div>
+
+       {/* ENQUIRY MODAL */}
+          <EnquirySideModal
+            isOpen={isEnquiryOpen}
+            onClose={() => setIsEnquiryOpen(false)}
+          />
     </section>
   );
 }

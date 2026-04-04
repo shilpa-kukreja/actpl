@@ -127,7 +127,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 sm:py-20 py-12 grid gap-20 lg:grid-cols-2 items-start">
           {/* ===== LEFT INFO ===== */}
           <div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-[#1b3163] mb-5">
+            <h2 className="text-3xl sm:text-5xl font-bold text-text mb-5">
               Get In Touch
             </h2>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
               and help you find the right writing solutions for your business.
             </p>
 
-            <div className="space-y-10">
+            <div className="space-y-10 ">
               <InfoBox
                 icon={<User size={20} />}
                 title="Contact Person"
@@ -238,7 +238,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#1b3163] text-white py-3 rounded-xl text-sm font-medium hover:bg-[#1e8a25] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-red-600 text-white py-3 rounded-xl text-sm font-medium hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {loading ? (
                   <>
@@ -284,8 +284,17 @@ export default function ContactPage() {
           </h2>
 
           <div className="w-full h-[420px] rounded-md overflow-hidden border shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.910108157431!2d83.76655197525761!3d26.523015376881567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993db2d593b5cf7%3A0xb97c591b4a2160b8!2sCHEMICALS%20%26%20ALLIED%20PRODUCTS!5e0!3m2!1sen!2sin!4v1771239484379!5m2!1sen!2sin"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d449540.9092327916!2d77.360544!3d28.327441!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20no.%20101%2C%20Sector%2068%2C%20Faridabad%2C%20Haryana%20121004!5e0!3m2!1sen!2sus!4v1775305508737!5m2!1sen!2sus" width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location"></iframe>
+            
+            
+            {/* <iframe
+              src="https://www.google.com/maps/search/Plot+no.+101,+Sector+68,+Faridabad,+Haryana+121004/@28.327441,77.360544,10z?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -293,7 +302,7 @@ export default function ContactPage() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Office Location"
-            />
+            /> */}
           </div>
         </div>
       </section>

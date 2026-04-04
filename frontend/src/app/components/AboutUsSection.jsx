@@ -26,7 +26,7 @@ function AboutUs() {
             {/* About Content */}
             <div className="space-y-2">
               <p className=" leading-relaxed text-justify ">
-                Tanushree Group is a diversified organization built on vision,
+                ACTPL is a diversified organization built on vision,
                 integrity, and long-term commitment. Since our inception in
                 2006, we have consistently delivered excellence across Real
                 Estate, Education, and Hospitality, guided by a belief that true

@@ -370,192 +370,146 @@ export default function AdminContactEnquiries() {
       )}
 
       {/* Enquiries table */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left">
-                    <input
-                      type="checkbox"
-                      onChange={handleSelectAll}
-                      checked={selectedIds.length === enquiries.length && enquiries.length > 0}
-                      className="rounded border-gray-300 text-gray-900 focus:ring-gray-900"
-                    />
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Date
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Name
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Contact
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Address
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Message
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Status
-                  </th>
-                  <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {enquiries.length === 0 ? (
-                  <tr>
-                    <td colSpan="8" className="px-6 py-12 text-center text-gray-500">
-                      <div className="flex flex-col items-center">
-                        <MessageSquare size={48} className="text-gray-300 mb-3" />
-                        <p className="text-lg font-medium">No enquiries found</p>
-                        <p className="text-sm">Try adjusting your search or filters</p>
-                      </div>
-                    </td>
-                  </tr>
-                ) : (
-                  enquiries.map((enquiry) => (
-                    <tr key={enquiry._id} className="hover:bg-gray-50 transition-colors">
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <input
-                          type="checkbox"
-                          checked={selectedIds.includes(enquiry._id)}
-                          onChange={() => handleSelectOne(enquiry._id)}
-                          className="rounded border-gray-300 text-gray-900 focus:ring-gray-900"
-                        />
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <Calendar size={14} className="mr-1 text-gray-400" />
-                          {format(new Date(enquiry.createdAt), 'dd/MM/yyyy')}
-                        </div>
-                        <div className="text-xs text-gray-400">
-                          {format(new Date(enquiry.createdAt), 'HH:mm')}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center">
-                          <User size={14} className="mr-2 text-gray-400" />
-                          <div className="text-sm font-medium text-gray-900">{enquiry.name}</div>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center text-sm text-gray-900">
-                          <Mail size={14} className="mr-1 text-gray-400" />
-                          <span className="truncate max-w-[150px]">{enquiry.email}</span>
-                        </div>
-                        <div className="flex items-center text-sm text-gray-500 mt-1">
-                          <Phone size={14} className="mr-1 text-gray-400" />
-                          {enquiry.phone}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="flex items-start">
-                          <MapPin size={14} className="mr-2 text-gray-400 flex-shrink-0 mt-1" />
-                          <div className="text-sm text-gray-600 max-w-[150px] truncate">
-                            {enquiry.address}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="text-sm text-gray-900 max-w-xs truncate">
-                          {enquiry.message}
-                        </div>
-                        {enquiry.notes && (
-                          <div className="text-xs text-gray-500 mt-1 italic">
-                            Note: {enquiry.notes}
-                          </div>
-                        )}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <select
-                          value={enquiry.status}
-                          onChange={(e) => handleStatusChange(enquiry._id, e.target.value)}
-                          className={`text-sm rounded-full px-3 py-1 font-semibold border ${getStatusBadgeClass(enquiry.status)}`}
-                        >
-                          <option value="pending">Pending</option>
-                          <option value="contacted">Contacted</option>
-                          <option value="resolved">Resolved</option>
-                          <option value="spam">Spam</option>
-                        </select>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <button
-                          onClick={() => viewDetails(enquiry)}
-                          className="text-gray-600 hover:text-gray-900 mr-3"
-                          title="View Details"
-                        >
-                          <Eye size={18} />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(enquiry._id)}
-                          className="text-red-600 hover:text-red-900"
-                          title="Delete"
-                        >
-                          <Trash2 size={18} />
-                        </button>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-          </div>
+     {/* Enquiries table */}
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div className="bg-white rounded-lg shadow overflow-hidden">
+    
+    <div className="overflow-x-auto">
+      <table className="w-full table-fixed divide-y divide-gray-200">
+        
+        {/* HEADER */}
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="w-[35px]  py-2">
+              <input
+                type="checkbox"
+                onChange={handleSelectAll}
+                checked={selectedIds.length === enquiries.length && enquiries.length > 0}
+                className="rounded border-gray-300 text-gray-900"
+              />
+            </th>
 
-          {/* Pagination */}
-          {pagination.totalPages > 1 && (
-            <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-              <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                <div>
-                  <p className="text-sm text-gray-700">
-                    Showing <span className="font-medium">{(filters.page - 1) * 10 + 1}</span> to{' '}
-                    <span className="font-medium">
-                      {Math.min(filters.page * 10, pagination.totalItems)}
-                    </span>{' '}
-                    of <span className="font-medium">{pagination.totalItems}</span> results
-                  </p>
-                </div>
-                <div>
-                  <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
-                    <button
-                      onClick={() => setFilters(prev => ({ ...prev, page: prev.page - 1 }))}
-                      disabled={filters.page === 1}
-                      className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    {[...Array(pagination.totalPages)].map((_, i) => (
-                      <button
-                        key={i + 1}
-                        onClick={() => setFilters(prev => ({ ...prev, page: i + 1 }))}
-                        className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
-                          filters.page === i + 1
-                            ? 'z-10 bg-gray-50 border-gray-900 text-gray-900'
-                            : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        {i + 1}
-                      </button>
-                    ))}
-                    <button
-                      onClick={() => setFilters(prev => ({ ...prev, page: prev.page + 1 }))}
-                      disabled={filters.page === pagination.totalPages}
-                      className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-                  </nav>
-                </div>
-              </div>
-            </div>
+            <th className="w-[120px] px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">
+              Date
+            </th>
+
+            <th className="w-[140px] px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">
+              Name
+            </th>
+
+            <th className="w-[180px] px-3 py-2 text-xs text-left font-medium text-gray-500 uppercase">
+              Contact
+            </th>
+
+            <th className="w-[160px] px-3 py-2 text-xs text-left font-medium text-gray-500 uppercase">
+              Address
+            </th>
+
+            <th className="w-[200px] px-3 py-2 text-xs text-left font-medium text-gray-500 uppercase">
+              Message
+            </th>
+
+            <th className="w-[140px] px-3 py-2 text-xs text-left font-medium text-gray-500 uppercase">
+              Status
+            </th>
+
+            <th className="w-[120px] px-3 py-2 text-right text-xs font-medium text-gray-500 uppercase">
+              Actions
+            </th>
+          </tr>
+        </thead>
+
+        {/* BODY */}
+        <tbody className="bg-white divide-y divide-gray-200">
+          {enquiries.length === 0 ? (
+            <tr>
+              <td colSpan="8" className="px-3 py-10 text-center text-gray-500">
+                No enquiries found
+              </td>
+            </tr>
+          ) : (
+            enquiries.map((enquiry) => (
+              <tr key={enquiry._id} className="hover:bg-gray-50">
+
+                {/* Checkbox */}
+                <td className="px-3 py-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedIds.includes(enquiry._id)}
+                    onChange={() => handleSelectOne(enquiry._id)}
+                    className="rounded border-gray-300 text-gray-900"
+                  />
+                </td>
+
+                {/* Date */}
+                <td className="px-3 py-2 text-sm text-gray-500">
+                  <div>{format(new Date(enquiry.createdAt), 'dd/MM/yyyy')}</div>
+                  <div className="text-xs text-gray-400">
+                    {format(new Date(enquiry.createdAt), 'HH:mm')}
+                  </div>
+                </td>
+
+                {/* Name */}
+                <td className="px-3 py-2 text-sm font-medium text-gray-900 truncate">
+                  {enquiry.name}
+                </td>
+
+                {/* Contact */}
+                <td className="px-3 py-2 text-sm">
+                  <div className="truncate">{enquiry.email}</div>
+                  <div className="text-gray-500 text-xs">{enquiry.phone}</div>
+                </td>
+
+                {/* Address */}
+                <td className="px-3 py-2 text-sm text-gray-600 truncate">
+                  {enquiry.address}
+                </td>
+
+                {/* Message */}
+                <td className="px-3 py-2 text-sm text-gray-900 truncate">
+                  {enquiry.message}
+                </td>
+
+                {/* Status */}
+                <td className="px-3 py-2">
+                  <select
+                    value={enquiry.status}
+                    onChange={(e) => handleStatusChange(enquiry._id, e.target.value)}
+                    className={`text-sm rounded-full px-2 py-1 border ${getStatusBadgeClass(enquiry.status)}`}
+                  >
+                    <option value="pending">Pending</option>
+                    <option value="contacted">Contacted</option>
+                    <option value="resolved">Resolved</option>
+                    <option value="spam">Spam</option>
+                  </select>
+                </td>
+
+                {/* Actions */}
+                <td className="px-3 py-2 text-right">
+                  <button
+                    onClick={() => viewDetails(enquiry)}
+                    className="text-gray-600 hover:text-gray-900 mr-2"
+                  >
+                    <Eye size={16} />
+                  </button>
+
+                  <button
+                    onClick={() => handleDelete(enquiry._id)}
+                    className="text-red-600 hover:text-red-900"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </td>
+
+              </tr>
+            ))
           )}
-        </div>
-      </div>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
 
       {/* Details Modal */}
       {showDetailsModal && selectedEnquiry && (
@@ -607,7 +561,7 @@ export default function AdminContactEnquiries() {
                 </div>
               )}
               
-              {selectedEnquiry.ipAddress && (
+              {/* {selectedEnquiry.ipAddress && (
                 <div>
                   <label className="text-sm text-gray-500">IP Address</label>
                   <p className="font-medium">{selectedEnquiry.ipAddress}</p>
@@ -619,7 +573,7 @@ export default function AdminContactEnquiries() {
                   <label className="text-sm text-gray-500">User Agent</label>
                   <p className="font-medium text-sm text-gray-600 break-words">{selectedEnquiry.userAgent}</p>
                 </div>
-              )}
+              )} */}
             </div>
             <div className="mt-6 flex justify-end gap-2">
               <select

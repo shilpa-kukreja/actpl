@@ -13,6 +13,7 @@ import {
 import axios from "axios";
 import { usePathname } from "next/navigation";
 import EnquirySideModal from "./EnquiryModals";
+import QueryEnquiryModel from "./EnquiryModal";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -25,6 +26,8 @@ export default function Navbar() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+  const [isQueryOpen, setIsQueryOpen] = useState(false);
+
 
   const dropdownRef = useRef(null);
 
@@ -138,7 +141,7 @@ export default function Navbar() {
 
             {/* GET QUOTE */}
             <button
-              onClick={() => setIsEnquiryOpen(true)}
+              onClick={() => setIsQueryOpen(true)}
               className="hidden lg:flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold hover:bg-red-700"
             >
               Get Quote
@@ -230,7 +233,7 @@ export default function Navbar() {
           <button
             onClick={() => {
               setIsMenuOpen(false);
-              setIsEnquiryOpen(true);
+              setIsQueryOpen(true);
             }}
             className="w-full bg-red-600 text-white py-3 rounded-lg mt-4"
           >
@@ -244,7 +247,13 @@ export default function Navbar() {
     <EnquirySideModal
       isOpen={isEnquiryOpen}
       onClose={() => setIsEnquiryOpen(false)}
-      products={products}
+    />
+
+
+     {/* ENQUIRY MODAL */}
+    <QueryEnquiryModel
+      isOpen={isQueryOpen}
+      onClose={() => setIsQueryOpen(false)}
     />
   </>
 );

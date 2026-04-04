@@ -57,10 +57,10 @@ import { sendEnquiryEmails } from "../utils/emailService.js";
 // };
 export const createEnquiry = async (req, res) => {
   try {
-    const { productName, name, email, phone, requirement } = req.body;
+    const {name, email, phone, requirement } = req.body;
 
     // Validate required fields
-    if (!productName || !name || !email || !phone || !requirement) {
+    if ( !name || !email || !phone || !requirement) {
       return res.status(400).json({
         success: false,
         message: 'Please provide all required fields'
@@ -69,7 +69,6 @@ export const createEnquiry = async (req, res) => {
 
     // Create enquiry
     const enquiry = await EnquiryModal.create({
-      productName,
       name,
       email,
       phone,
