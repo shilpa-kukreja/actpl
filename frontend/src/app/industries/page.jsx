@@ -81,7 +81,7 @@ export default function IndustriesPage() {
 
       {/* CONTENT */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <h2 className="text-4xl font-semibold mb-8 text-gray-700">
+        <h2 className="text-3xl sm:text-5xl font-bold mb-8 text-gray-700">
           Industries
         </h2>
 
@@ -105,7 +105,7 @@ export default function IndustriesPage() {
                 <h3 className="text-xl font-bold text-red-600 mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-md leading-relaxe text-align">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxe text-align">
                   {item.desc}
                 </p>
 

@@ -82,196 +82,170 @@ export default function Navbar() {
     : "bg-white shadow-md sticky top-0";
 
   const linkStyle = (path) =>
-    `transition hover:text-red-600 ${
-      pathname === path ? "text-red-600 font-semibold" : ""
+    `transition hover:text-red-600 ${pathname === path ? "text-red-600 font-semibold" : ""
     }`;
 
   return (
-    <>
-      <header className={`w-full z-50 ${navStyle} `}>
-        <nav>
-          <div className="max-w-7xl mx-auto px-4 h-[88px] grid grid-cols-[1fr_2fr_1fr] items-center ">
+  <>
+    <header className={`w-full z-50 ${navStyle} transition-all duration-300`}>
+      <nav>
+        {/* ✅ FLEX instead of GRID */}
+        <div className="max-w-7xl mx-auto px-4 h-[70px] lg:h-[88px] flex items-center justify-between">
 
-            {/* LOGO */}
-            <div className="flex items-center">
-              <Link href="/">
-                <img src="/logo.png" className="h-12 w-auto" />
+          {/* LOGO */}
+          <div className="flex items-center">
+            <Link href="/">
+              <img src="/logo.png" className="h-10 lg:h-12 w-auto" />
+            </Link>
+          </div>
+
+          {/* CENTER MENU */}
+          <ul className="hidden lg:flex justify-center items-center gap-6 xl:gap-8 font-medium flex-wrap">
+
+            <li>
+              <Link href="/" className={linkStyle("/")}>
+                Home
               </Link>
-            </div>
+            </li>
 
-            {/* CENTER MENU */}
-            <ul className="hidden lg:flex justify-center items-center gap-8 font-medium">
+            <li>
+              <Link href="/services" className={linkStyle("/services")}>
+                Services
+              </Link>
+            </li>
 
-              <li>
-                <Link href="/" className={linkStyle("/")}>
-                  Home
-                </Link>
-              </li>
+            <li>
+              <Link href="/industries" className={linkStyle("/industries")}>
+                Industries
+              </Link>
+            </li>
 
-              
+            <li>
+              <Link href="/about-us" className={linkStyle("/about-us")}>
+                Company Profile
+              </Link>
+            </li>
 
-              {/* PRODUCTS */}
-              <li className="relative" ref={dropdownRef}>
-                {/* <button
-                  onClick={() => setOpenDropdown(!openDropdown)}
-                  className="flex items-center gap-1 hover:text-red-600"
-                >
-                  Our Products
-                   <ChevronDown 
-                    size={14}
-                    className={`transition ${
-                      openDropdown ? "rotate-180" : ""
-                    }`} 
-                  /> 
-                </button> */}
+            <li>
+              <Link href="/contact-us" className={linkStyle("/contact-us")}>
+                Contact Us
+              </Link>
+            </li>
+          </ul>
 
-                {/* {openDropdown && (
-                  <div className="absolute top-full mt-4 w-[340px] bg-white rounded-md shadow-xl border z-50">
+          {/* RIGHT SIDE */}
+          <div className="flex justify-end items-center gap-3">
 
-                    <div className="p-4 space-y-1">
-                      {loading ? (
-                        <div className="flex justify-center py-4">
-                          <Loader2 className="animate-spin" />
-                        </div>
-                      ) : (
-                        categories.slice(0, 6).map((cat) => (
-                          <Link
-                            key={cat._id}
-                            href={`/category/${cat.slug}`}
-                            onClick={() => setOpenDropdown(false)}
-                            className="block px-4 py-2 rounded hover:bg-red-50"
-                          >
-                            {cat.name}
-                          </Link>
-                        ))
-                      )}
-                    </div>
-
-                    <div className="bg-gray-50 text-center py-3">
-                      <Link
-                        href="/agricultural-herbicides-insecticide"
-                        className="text-sm font-semibold text-green-700"
-                      >
-                        View All →
-                      </Link>
-                    </div>
-                  </div>
-                )} */}
-              </li>
-
-             
-              <li>
-                <Link href="/services" className={linkStyle("/services")}>
-                  Services
-                </Link>
-              </li>
-
-               <li>
-                <Link href="/industries" className={linkStyle("/industries")}>
-                   Industries
-                </Link>
-              </li>
-
-
-              <li>
-                <Link href="/about-us" className={linkStyle("/about-us")}>
-                  Company Profile
-                </Link>
-              </li>
-
-              <li>
-                <Link href="/contact-us" className={linkStyle("/contact-us")}>
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-
-            {/* RIGHT SIDE */}
-            <div className="flex justify-end items-center gap-3">
-
-
-              {/* GET QUOTE */}
-              <button
-                onClick={() => setIsEnquiryOpen(true)}
-                className="hidden lg:flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold hover:bg-red-700"
-              >
-              
-                Get Quote
-              </button>
-
-              {/* MOBILE MENU BUTTON */}
-              <button
-                onClick={() => setIsMenuOpen(true)}
-                className="lg:hidden"
-              >
-                <Menu />
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      {/* ================= MOBILE DRAWER ================= */}
-      <div
-        className={`fixed inset-0 z-[999] ${
-          isMenuOpen ? "visible" : "invisible"
-        }`}
-      >
-        <div
-          onClick={() => setIsMenuOpen(false)}
-          className="absolute inset-0 bg-black/50"
-        />
-
-        <div
-          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white transition ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="flex justify-between p-5 border-b">
-            <h2 className="font-bold">Menu</h2>
-            <X onClick={() => setIsMenuOpen(false)} />
-          </div>
-
-          <div className="p-6 space-y-4">
-
-            <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link href="/about-us" onClick={() => setIsMenuOpen(false)}>Company Profile</Link>
-            <Link href="/contact-us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
-
-            <div className="border-t pt-4">
-              <p className="font-semibold mb-2">Our Products</p>
-
-              {categories.map((cat) => (
-                <Link
-                  key={cat._id}
-                  href={`/category/${cat.slug}`}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-1"
-                >
-                  {cat.name}
-                </Link>
-              ))}
-            </div>
-
+            {/* GET QUOTE */}
             <button
-              onClick={() => {
-                setIsMenuOpen(false);
-                setIsEnquiryOpen(true);
-              }}
-              className="w-full bg-green-700 text-white py-3 rounded-lg"
+              onClick={() => setIsEnquiryOpen(true)}
+              className="hidden lg:flex items-center gap-2 bg-red-600 text-white px-5 py-2.5 rounded-md font-semibold hover:bg-red-700"
             >
               Get Quote
             </button>
+
+            {/* MOBILE MENU BUTTON */}
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="lg:hidden p-2"
+            >
+              <Menu size={28} />
+            </button>
           </div>
         </div>
-      </div>
+      </nav>
+    </header>
 
-      {/* ENQUIRY MODAL */}
-      <EnquirySideModal
-        isOpen={isEnquiryOpen}
-        onClose={() => setIsEnquiryOpen(false)}
-        products={products}
+    {/* ================= MOBILE DRAWER ================= */}
+    <div
+      className={`fixed inset-0 z-[999] ${
+        isMenuOpen ? "visible" : "invisible"
+      }`}
+    >
+      {/* BACKDROP */}
+      <div
+        onClick={() => setIsMenuOpen(false)}
+        className="absolute inset-0 bg-black/50"
       />
-    </>
-  );
+
+      {/* DRAWER */}
+      <div
+        className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-white transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* HEADER */}
+        <div className="flex justify-between items-center p-5 border-b">
+          <h2 className="font-bold text-lg">Menu</h2>
+          <X
+            onClick={() => setIsMenuOpen(false)}
+            className="cursor-pointer"
+          />
+        </div>
+
+        {/* MENU ITEMS */}
+        <div className="p-6 flex flex-col gap-5 text-lg font-medium">
+
+          <Link
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            Home
+          </Link>
+
+          <Link
+            href="/services"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            Services
+          </Link>
+
+          <Link
+            href="/industries"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            Industries
+          </Link>
+
+          <Link
+            href="/about-us"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            Company Profile
+          </Link>
+
+          <Link
+            href="/contact-us"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            Contact Us
+          </Link>
+
+          {/* CTA */}
+          <button
+            onClick={() => {
+              setIsMenuOpen(false);
+              setIsEnquiryOpen(true);
+            }}
+            className="w-full bg-red-600 text-white py-3 rounded-lg mt-4"
+          >
+            Get Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* ENQUIRY MODAL */}
+    <EnquirySideModal
+      isOpen={isEnquiryOpen}
+      onClose={() => setIsEnquiryOpen(false)}
+      products={products}
+    />
+  </>
+);
 }

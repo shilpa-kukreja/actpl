@@ -218,18 +218,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  X,
-  Instagram,
   Plus,
   Minus,
 } from "lucide-react";
@@ -284,10 +278,24 @@ export default function Footer() {
             Gujarat-based manufacturing company delivering high-quality chemical solutions.
           </p>
 
-          <div className="flex gap-4">
-            <FaFacebookF />
-            <X />
-            <FaInstagram/>
+             <div className="flex gap-5 mt-4 text-2xl">
+
+            <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
+              <FaFacebook />
+            </span>
+
+            <span className="cursor-pointer text-[#FF0000] hover:scale-110 transition">
+              <FaYoutube />
+            </span>
+
+            <span className="cursor-pointer text-[#E4405F] hover:scale-110 transition">
+              <FaInstagram />
+            </span>
+
+            <span className="cursor-pointer text-white hover:scale-110 transition">
+              <FaSquareXTwitter />
+            </span>
+
           </div>
         </div>
 
@@ -296,10 +304,12 @@ export default function Footer() {
           <SectionHeader title="Quick Links" id="quick" />
 
           <div
-            className={`overflow-hidden transition-all duration-500 ${
-              openSection === "quick" ? "max-h-96 mt-5" : "max-h-0 lg:max-h-full lg:mt-5"
-            }`}
-          >
+  className={`overflow-hidden transition-all duration-500 ${
+    openSection === "quick"
+      ? "max-h-[500px] opacity-100 mt-5"
+      : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
+  }`}
+>
             <ul className="space-y-3 text-sm">
               {quickLinks.map((item) => (
                 <li key={item.name}>
@@ -316,11 +326,13 @@ export default function Footer() {
         <div>
           <SectionHeader title="Our Services" id="products" />
 
-          <div
-            className={`overflow-hidden transition-all duration-500 ${
-              openSection === "products" ? "max-h-96 mt-5" : "max-h-0 lg:max-h-full lg:mt-5"
-            }`}
-          >
+         <div
+  className={`overflow-hidden transition-all duration-500 ${
+    openSection === "products"
+      ? "max-h-[500px] opacity-100 mt-5"
+      : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
+  }`}
+>
             <div className="space-y-3 text-sm">
               {categories.map((cat) => (
                 <Link
@@ -340,19 +352,21 @@ export default function Footer() {
           <SectionHeader title="Contact Us" id="contact" />
 
           <div
-            className={`overflow-hidden transition-all duration-500 ${
-              openSection === "contact" ? "max-h-96 mt-5" : "max-h-0 lg:max-h-full lg:mt-5"
-            }`}
-          >
+  className={`overflow-hidden transition-all duration-500 ${
+    openSection === "contact"
+      ? "max-h-[500px] opacity-100 mt-5"
+      : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
+  }`}
+>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex gap-3">
-                <Mail size={16} /> ajantadfpens@gmail.com
+                <Mail size={18} /> ajantadfpens@gmail.com
               </li>
               <li className="flex gap-3">
                 <Phone size={16} /> +91 8046047240
               </li>
               <li className="flex gap-3">
-                <MapPin size={16} />  Gorakhpur Road, Industrial Area, Deoria - 274001, Uttar Pradesh, India
+                <MapPin size={30} />  Gorakhpur Road, Industrial Area, Deoria - 274001, Uttar Pradesh, India
               </li>
             </ul>
           </div>

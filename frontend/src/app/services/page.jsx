@@ -32,12 +32,17 @@ export default function Home() {
       <Navbar />
 
        {/* ================= HERO IMAGE ================= */}
-        <section className="w-full h-90">
-          <div className=" w-full">
-            <img
-              src="/services/banner.png"
+        <section className="w-full">
+          <div className=" w-full ">
+            <video
+              src="/services/video.mp4"
               alt="Eric AI CRA"
-              className="w-full h-full object-cover"
+
+        autoPlay
+        muted
+        loop
+        playsInline
+              className="w-full h-40 sm:h-90 object-cover"
             />
           </div>
         </section>
@@ -46,15 +51,15 @@ export default function Home() {
         <section className="relative bg-white">
           <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                 We are here with an economical solution
               </h1>
-              <p className="mt-6 text-gray-600 text-lg">
+              <p className="mt-6 text-gray-600 text-md sm:text-lg">
                 We are committed to delivering cost-effective solutions with
                 superior quality and precision engineering.
               </p>
 
-              <button className="mt-8 px-6 py-3 bg-black text-white rounded-lg shadow-lg hover:bg-gray-800 transition">
+              <button className="mt-8 px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-gray-800 transition">
                 Get Started
               </button>
             </div>
@@ -96,10 +101,10 @@ export default function Home() {
         </section>
 
         {/* SERVICES GRID */}
-    <section className="py-16 bg-gray-50"> 
+    <section className="py-12 bg-gray-50"> 
   <div className="max-w-7xl mx-auto px-6">
     
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+    <h2 className="text-3xl md:text-5xl font-bold text-center mb-14">
       Our Capabilities
     </h2>
 
@@ -147,10 +152,10 @@ export default function Home() {
         
         {/* Heading */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
             Our Process
           </h2>
-          <p className="text-gray-500 mt-4">
+          <p className="text-gray-500 mt-4 text-md sm:text-lg">
             A structured and efficient workflow from concept to delivery
           </p>
         </div>

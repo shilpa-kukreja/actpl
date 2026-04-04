@@ -24,11 +24,11 @@ export default function ProblemSolution() {
 
         {/* Content Side */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-6">
             Facing These Challenges?
           </h2>
 
-          <ul className="space-y-4 text-gray-800 text-lg">
+          <ul className="space-y-4 text-gray-800 text-md sm:text-lg">
             <li>✔ OEM spare parts discontinued</li>
             <li>✔ Long import lead times</li>
             <li>✔ High maintenance & downtime cost</li>

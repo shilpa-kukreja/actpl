@@ -54,53 +54,67 @@ export default function FAQSection() {
 
   // toggle logic
   const handleToggle = (id) => {
-    setActiveId((prev) => (prev === id ? null : id));
-  };
+  setActiveId((prev) => (prev === id ? null : id));
+};
 
-  return (
-    <section className=" py-10">
-      <div className="max-w-7xl mx-auto px-4">
+ return (
+  <section className="py-12">
+    <div className="max-w-7xl mx-auto px-4">
 
-        {/* Header */}
-        <div className="max-w-3xl mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1b3163] mb-3">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-white text-base md:text-lg">
-            Clear answers to common questions about our products,
-            manufacturing standards, and services.
-          </p>
-        </div>
-
-        {/* Two Independent Columns */}
-        <div className="flex flex-col md:flex-row gap-8">
-
-          <div className="flex-1 flex flex-col gap-5">
-            {leftFaqs.map((faq) => (
-              <FAQItem
-                key={faq.id}
-                faq={faq}
-                isActive={activeId === faq.id}
-                onClick={() => handleToggle(faq.id)}
-              />
-            ))}
-          </div>
-
-          <div className="flex-1 flex flex-col gap-5">
-            {rightFaqs.map((faq) => (
-              <FAQItem
-                key={faq.id}
-                faq={faq}
-                isActive={activeId === faq.id}
-                onClick={() => handleToggle(faq.id)}
-              />
-            ))}
-          </div>
-
-        </div>
+      {/* Header */}
+      <div className="max-w-3xl mb-10">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#1b3163] mb-5">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-black text-base md:text-lg">
+          Clear answers to common questions about our products,
+          manufacturing standards, and services.
+        </p>
       </div>
-    </section>
-  );
+
+      {/* ✅ MOBILE: Single Column (Correct Order) */}
+      <div className="flex flex-col gap-5 md:hidden">
+        {[...leftFaqs, ...rightFaqs]
+          .sort((a, b) => a.id - b.id)
+          .map((faq) => (
+            <FAQItem
+              key={faq.id}
+              faq={faq}
+              isActive={activeId === faq.id}
+              onClick={() => handleToggle(faq.id)}
+            />
+          ))}
+      </div>
+
+      {/* ✅ DESKTOP: Two Columns */}
+      <div className="hidden md:flex gap-8">
+
+        <div className="flex-1 flex flex-col gap-5">
+          {leftFaqs.map((faq) => (
+            <FAQItem
+              key={faq.id}
+              faq={faq}
+              isActive={activeId === faq.id}
+              onClick={() => handleToggle(faq.id)}
+            />
+          ))}
+        </div>
+
+        <div className="flex-1 flex flex-col gap-5">
+          {rightFaqs.map((faq) => (
+            <FAQItem
+              key={faq.id}
+              faq={faq}
+              isActive={activeId === faq.id}
+              onClick={() => handleToggle(faq.id)}
+            />
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+);
 }
 
 /* ===================== FAQ ITEM ===================== */
@@ -115,17 +129,19 @@ function FAQItem({ faq, isActive, onClick }) {
     >
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between px-6 py-4 text-left"
+        className="w-full flex items-center justify-between gap-4 px-4 md:px-6 py-4 text-left"
       >
-        <span className="font-medium text-gray-900 text-base md:text-lg">
+        {/* TEXT */}
+        <span className="font-medium text-gray-900 text-sm md:text-lg leading-snug">
           {faq.id}. {faq.question}
         </span>
 
-        {/* Icon */}
+        {/* ✅ PERFECT CIRCLE ICON */}
         <span
-          className={`ml-4 flex h-8 w-8 items-center justify-center rounded-full border transition-all duration-300 ${
+          className={`flex items-center justify-center rounded-full border transition-all duration-300 
+          w-8 h-8 min-w-[32px] aspect-square flex-shrink-0 ${
             isActive
-              ? "border-gray-300 text-gray-500 rotate-90"
+              ? "border-gray-300 text-gray-500 rotate-45"
               : "border-gray-300 text-gray-500"
           }`}
         >
@@ -133,16 +149,16 @@ function FAQItem({ faq, isActive, onClick }) {
         </span>
       </button>
 
-      {/* Smooth Accordion */}
-      <div
-        className={`grid overflow-hidden transition-all space-y-1 duration-300 ${
-          isActive ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="overflow-hidden px-6  text-gray-600 text-sm md:text-base leading-relaxed">
-          {faq.answer}
-        </div>
-      </div>
+      {/* ANSWER */}
+    <div
+  className={`overflow-hidden transition-all duration-300 ${
+    isActive ? "max-h-[200px] opacity-100 mt-2" : "max-h-0 opacity-0"
+  }`}
+>
+  <div className="px-4 md:px-6 pb-4 text-gray-600 text-sm md:text-base leading-relaxed">
+    {faq.answer}
+  </div>
+</div>
     </div>
   );
 }

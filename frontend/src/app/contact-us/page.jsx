@@ -108,31 +108,35 @@ export default function ContactPage() {
       <Navbar />
 
       <section className=" text-gray-800">
-           <div className="relative h-[300px] w-full">
-        <img
-          src="/industries/banner.png"
-          alt="Industries"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white">
-          <h1 className="text-4xl font-bold">CONTACT US</h1>
-        </div>
-      </div>
+           <section className="w-full">
+          <div className=" w-full">
+            <video
+              src="/industries/video.mp4"
+              alt="Eric AI CRA"
+
+        autoPlay
+        muted
+        loop
+        playsInline
+              className="w-full h-40 sm:h-90 object-cover"
+            />
+          </div>
+        </section>
 
         {/* ===== MAIN SECTION ===== */}
-        <div className="max-w-7xl mx-auto px-6 sm:py-20 py-10 grid gap-20 lg:grid-cols-2 items-start">
+        <div className="max-w-7xl mx-auto px-6 sm:py-20 py-12 grid gap-20 lg:grid-cols-2 items-start">
           {/* ===== LEFT INFO ===== */}
           <div>
-            <h2 className="text-4xl font-bold text-[#1b3163] mb-5">
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#1b3163] mb-5">
               Get In Touch
             </h2>
 
-            <p className="text-white mb-12 text-justify max-w-md leading-relaxed">
+            <p className="text-gray-700 mb-12 text-justify max-w-md leading-relaxed">
               We're here to answer your questions, discuss your requirements,
               and help you find the right writing solutions for your business.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-10">
               <InfoBox
                 icon={<User size={20} />}
                 title="Contact Person"
@@ -157,7 +161,7 @@ export default function ContactPage() {
           </div>
 
           {/* ===== RIGHT FORM ===== */}
-          <div className="bg-white border border-gray-200 rounded-md p-10 shadow-lg">
+          <div className="bg-white border border-gray-200 rounded-md p-4 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">
               Reach Out To Us
             </h3>

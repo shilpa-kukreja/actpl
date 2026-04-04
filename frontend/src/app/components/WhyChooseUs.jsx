@@ -54,7 +54,7 @@ export default function WhyACTPL() {
             Why ACTPL
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4">
             Engineering Excellence You Can Trust
           </h2>
 
@@ -69,7 +69,7 @@ export default function WhyACTPL() {
 
           {/* Left Side Content */}
           <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Your Reliable Partner for Critical Spare Parts
             </h3>
 

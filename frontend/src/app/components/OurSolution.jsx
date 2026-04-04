@@ -46,8 +46,8 @@ export default function OurSolution() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 whitespace-nowrap">
+        <div className=" text-center max-w-2xl mx-auto mb-20 align-middle">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Our Reverse Engineering Solution
           </h2>
 
@@ -65,7 +65,7 @@ export default function OurSolution() {
 
               {/* Connector Line */}
               {index !== steps.length - 1 && (
-                <div className="hidden md:block absolute top-14 left-full w-full h-[2px] bg-gradient-to-r from-red-400 to-transparent"></div>
+                <div className="hidden md:block absolute top-14 left-full w-full h-[2px] bg-gradient-to-r from-black to-transparent"></div>
               )}
 
               {/* Card */}

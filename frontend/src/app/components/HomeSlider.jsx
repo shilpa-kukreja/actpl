@@ -61,7 +61,7 @@ const fetchBanners = async () => {
               alt="Main Banner"
               loading="lazy"
               // priority={index === 0}
-              className="w-full h-[800px] object-cover  transition-transform duration-500 "
+              className="w-full h-90 sm:h-230 object-cover  transition-transform duration-500 "
             />
           </div>
         ))}

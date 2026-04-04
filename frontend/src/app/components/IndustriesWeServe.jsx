@@ -33,7 +33,7 @@ export default function IndustriesWeServe() {
             Industries We Serve
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4">
             Delivering Solutions Across
             <span className="text-red-600"> Core Industries</span>
           </h2>

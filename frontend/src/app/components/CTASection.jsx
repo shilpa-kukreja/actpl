@@ -31,17 +31,17 @@ export default function CTASection() {
             </p>
 
             {/* Contact Line */}
-            <div className="flex items-center justify-center gap-3 text-white font-medium mb-10">
-              <PhoneCall className="text-white" />
+            <div className="flex items-center justify-center gap-3 text-black font-medium mb-10">
+              <PhoneCall className="text-black" />
               <span>Contact us today for a free technical consultation</span>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+            <div className="flex flex-row sm:flex-row gap-5 justify-center">
 
               {/* Contact Us */}
               <Link href="/contact-us">
-                <button className="group bg-red-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center gap-2  transition shadow-lg">
+                <button className="group bg-red-600 text-white px-2 sm:px-8 py-4 rounded-md font-semibold flex items-center gap-2  transition shadow-lg">
                   Contact Us
                   <ArrowRight
                     size={18}
@@ -52,7 +52,7 @@ export default function CTASection() {
 
               {/* Request Quote */}
               <Link href="/request-quote">
-                <button className="group border border-white px-8 py-4 bg-gray-200 rounded-xl font-semibold flex items-center gap-2  hover:text-blue-700 transition">
+                <button className="group border border-white px-2 sm:px-8 py-4 bg-gray-200 rounded-md font-semibold flex items-center gap-2  hover:text-blue-700 transition">
                   Request Quote
                   <ArrowRight
                     size={18}

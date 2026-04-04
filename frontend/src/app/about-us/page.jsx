@@ -41,38 +41,51 @@ export default function AboutUs() {
     <>
 
     <Navbar/>
+    {/* ================= HERO IMAGE ================= */}
+        <section className="w-full">
+          <div className=" w-full">
+            <img
+              src="/services/banner.png"
+              alt="Eric AI CRA"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+
+
     <section className="py-12 text-gray-800">
+     
       {/* ================= BREADCRUMB ================= */}
-      <div className="py-3 text-sm text-center">
+      <div className=" text-sm text-center">
         <div className="max-w-7xl mx-auto px-6">
-          <span className="text-4xl sm:text-5xl font-semibold text-[#1b3163]">About Us</span>
+          <span className="text-3xl sm:text-5xl font-bold ">About Us</span>
         </div>
       </div>
 
       {/* ================= COMPANY OVERVIEW SECTION ================= */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Company Description */}
           <div>
-            <h2 className="text-4xl font-bold text-[#1b3163] mb-6 relative">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-6 relative">
               <span className="relative z-10">Company Overview</span>
               <span className="absolute bottom-0 left-0 w-20 h-1 bg-red-600"></span>
             </h2>
             
             <p className="text-gray-700 text-justify leading-relaxed mb-6 text-lg">
-              <span className="font-bold text-[#1b3163] text-2xl">ACTPL</span> was established in the year 1974. 
+              <span className="font-bold text-[#1b3163] text-xl">ACTPL</span> was established in the year 1974. 
               We are a leading Manufacturer and Exporter of Agricultural Pesticides, Butachlor 50% EW Herbicide, 
               Granulated Bio Extract Organic Soil Enricher, and much more.
             </p>
             
-            <p className="text-gray-700 text-justify leading-relaxed mb-6">
+            <p className="text-gray-700 text-justify leading-relaxed mb-6 text-lg">
               An insecticide is a pesticide used against insects. They include ovicides and larvicides used 
               against the eggs and larvae of insects respectively. These are used in agriculture, industry and 
               the household. The use of insecticides is believed to be one of the major factors behind the 
               increase in agricultural productivity.
             </p>
             
-            <p className="text-gray-700 text-justify leading-relaxed mb-8">
+            <p className="text-gray-700 text-justify leading-relaxed mb-8 text-lg">
               These products are toxic and highly effective for killing various types of insects, termites and 
               others. Available in liquified form as well as in powder form, we offer our customers these 
               insecticides in customized packaging at nominal prices.
@@ -81,15 +94,15 @@ export default function AboutUs() {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8">
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-[#1b3163]">1974</div>
+                <div className="text-xl sm:text-3xl font-bold text-[#1b3163]">1974</div>
                 <div className="text-sm text-gray-600">Established</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-[#1b3163]">51-100</div>
+                <div className="text-xl sm:text-3xl font-bold text-[#1b3163]">51-100</div>
                 <div className="text-sm text-gray-600">Employees</div>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <div className="text-3xl font-bold text-[#1b3163]">20%</div>
+                <div className="text-xl sm:text-3xl font-bold text-[#1b3163]">20%</div>
                 <div className="text-sm text-gray-600">Export</div>
               </div>
             </div>
@@ -112,8 +125,8 @@ export default function AboutUs() {
       {/* ================= FACT SHEET SECTION WITH ICONS ================= */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-[#1b3163] mb-4">Factsheet</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Quick overview of our business profile and credentials</p>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4">Factsheet</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">Quick overview of our business profile and credentials</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <FactCard 
@@ -147,7 +160,7 @@ export default function AboutUs() {
       {/* ================= STATUTORY PROFILE ================= */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-[#1b3163] mb-12">Statutory Profile</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center  mb-12">Statutory Profile</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ProfileCard 
@@ -177,8 +190,8 @@ export default function AboutUs() {
       {/* ================= COMPANY GALLERY - LIKE REFERENCE IMAGE ================= */}
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-[#1b3163] mb-4">Company Gallery</h2>
-          <p className="text-center text-gray-600 mb-8">A glimpse into our facilities and operations</p>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center  mb-4">Company Gallery</h2>
+          <p className="text-center text-gray-600 mb-8 text-lg">A glimpse into our facilities and operations</p>
 
           {/* Category Filter */}
           <div className="flex flex-wrap gap-3 justify-center mb-10">
@@ -188,8 +201,8 @@ export default function AboutUs() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-4 py-2 rounded-full border transition text-sm font-medium ${
                   activeCategory === category
-                    ? "bg-[#1b3163] text-white border-[#1b3163]"
-                    : "bg-white border-gray-300 text-gray-700 hover:bg-[#1b3163] hover:text-white hover:border-[#1b3163]"
+                    ? "bg-red-600 text-white border-red-700"
+                    : "bg-white border-gray-300 text-gray-700 hover:bg-red-600 hover:text-white hover:border-red-700"
                 }`}
               >
                 {category}
@@ -214,7 +227,7 @@ export default function AboutUs() {
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                   />
                   <div className="absolute inset-0  bg-opacity-0 group-hover:bg-opacity-40 transition flex items-center justify-center">
-                    <span className="text-white opacity-0 group-hover:opacity-100 text-sm font-medium px-3 py-1 bg-[#1b3163] rounded-full">
+                    <span className="text-white opacity-0 group-hover:opacity-100 text-sm font-medium px-3 py-1 bg-red-600 rounded-full">
                       {image.category}
                     </span>
                   </div>
@@ -223,18 +236,18 @@ export default function AboutUs() {
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          {/* <div className="text-center mt-8">
             <button className="bg-[#1b3163] text-white px-8 py-3 rounded-lg hover:bg-[#2a4585] transition font-semibold">
               View Full Gallery
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* ================= PACKAGING, PAYMENT & SHIPMENT ================= */}
-      <div className="py-16">
+      <div className="py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-[#1b3163] mb-12">Packaging, Payment & Shipment</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Packaging, Payment & Shipment</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#1b3163]">
@@ -263,13 +276,13 @@ export default function AboutUs() {
               </ul>
             </div>
 
-            <div className="bg-[#1b3163] p-8 rounded-xl shadow-lg text-white">
+            <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#1b3163]">
               <div className="text-4xl mb-4">📧</div>
-              <h3 className="text-xl font-bold mb-4">Quick Message</h3>
-              <p className="mb-6 text-gray-200">
+              <h3 className="text-xl font-bold mb-4 text-[#1b3163]">Quick Message</h3>
+              <p className="mb-6 text-gray-700">
                 Discuss more about your requirement by contacting us now
               </p>
-              <Link href="/contact-us" className="hover:text-white transition"><button className="bg-yellow-400 text-[#1b3163] px-6 py-3 rounded-lg hover:bg-yellow-300 transition font-semibold w-full">
+              <Link href="/contact-us" className="hover:text-white transition"><button className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-semibold w-full">
                 Contact Us
               </button>
               </Link>
@@ -281,7 +294,7 @@ export default function AboutUs() {
       {/* ================= WHY PICK US ================= */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center text-[#1b3163] mb-12">Why Choose Us</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Why Choose Us</h2>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[

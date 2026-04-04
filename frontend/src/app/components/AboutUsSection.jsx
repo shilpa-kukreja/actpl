@@ -16,7 +16,7 @@ function AboutUs() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-5xl lg:text-4xl font-light leading-tight ">
+            <h1 className="text-3xl md:text-5xl lg:text-4xl  leading-tight ">
               Crafting Enduring{" "}
               <span className="font-medium text-[#ff0000]">
                 Excellence Since 2006
@@ -52,35 +52,15 @@ function AboutUs() {
             <div className="flex flex-wrap gap-4 pt-6">
               <button
                 className="group relative overflow-hidden px-6 py-3 rounded-xl
-bg-gradient-to-r from-red-600 via-[#c92407] to-red-700
-shadow-lg shadow-yellow-500/30 hover:shadow-yellow-500/50
+bg-gradient-to-r from-red-500 via-red-600 to-red-700
+shadow-lg
 transition-all duration-300 hover:scale-105"
               >
-                {/* CONTINUOUS SHINE */}
-                <span
-                  className="absolute inset-0 
-  bg-gradient-to-r from-transparent via-white/60 to-transparent
-  animate-shine"
-                />
-
                 {/* CONTENT */}
                 <div className="relative flex items-center justify-center space-x-3">
-                  <span className="font-bold capitalize text-black-900 tracking-wide">
+                  <span className="font-bold capitalize text-white tracking-wide">
                     LERN MORE
                   </span>
-                  <svg
-                    className="w-5 h-5 text-black-900 transform group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
                 </div>
               </button>
             </div>

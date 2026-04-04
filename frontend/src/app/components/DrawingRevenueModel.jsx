@@ -27,11 +27,11 @@ export default function DrawingRevenueModel() {
             Key Differentiator
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-4">
+          <h2 className="text-3xl md:text-5xl font-bold mt-4">
             Make Your Drawings <span className="text-red-600">Earn</span>
           </h2>
 
-          <p className="text-gray-600 max-w-3xl mx-auto mt-6 text-lg">
+          <p className="text-gray-600 max-w-3xl mx-auto mt-6 text-md sm:text-lg">
             ACTPL transforms reverse engineering from a one-time cost into a
             long-term digital asset that continuously generates business value.
           </p>
