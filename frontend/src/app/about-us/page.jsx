@@ -53,7 +53,7 @@ export default function AboutUs() {
         </section>
 
 
-    <section className="py-12 text-gray-800">
+    <section className="mt-12 text-gray-800">
      
       {/* ================= BREADCRUMB ================= */}
       <div className=" text-sm text-center">
@@ -123,7 +123,7 @@ export default function AboutUs() {
       </div>
 
       {/* ================= FACT SHEET SECTION WITH ICONS ================= */}
-      <div className="bg-gray-50 py-16">
+      {/* <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-4">Factsheet</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">Quick overview of our business profile and credentials</p>
@@ -155,10 +155,133 @@ export default function AboutUs() {
             />
           </div>
         </div>
+      </div> */}
+      <div className="bg-gray-100 py-12 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      {/* <span className="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 font-semibold tracking-wider uppercase text-sm">
+        Company Profile
+      </span> */}
+
+      <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
+        Factsheet
+      </h2>
+
+      <div className="w-24 h-1 bg-red-600 mx-auto mt-5 rounded-full"></div>
+
+      <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+        A quick overview of our business credentials, leadership and company
+        information that reflects our strength, reliability and commitment to
+        excellence.
+      </p>
+    </div>
+
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+      {/* Card 1 */}
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+
+        <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+
+        <div className="w-12 h-12 rounded-2xl bg-gray-300 flex items-center justify-center text-3xl shadow-lg">
+          🏢
+        </div>
+
+        <h3 className="mt-7 text-xl font-semibold">
+          Nature of Business
+        </h3>
+
+        <p className="mt-4 text-2xl font-medium text-red-500">
+          Manufacturer
+        </p>
+
+        <p className="mt-3 text-gray-400 leading-relaxed">
+          Factory • Warehouse • Office
+        </p>
+
+        <div className="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-red-600/10 group-hover:scale-150 transition duration-700"></div>
       </div>
 
+      {/* Card 2 */}
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+
+        <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+
+        <div className="w-12 h-12 rounded-2xl bg-gray-300 flex items-center justify-center text-3xl">
+          👨‍💼
+        </div>
+
+        <h3 className="mt-7 text-xl font-semibold">
+          Company CEO
+        </h3>
+
+        <p className="mt-4 text-2xl font-medium text-red-500">
+          Sanjeev Arora
+        </p>
+
+        <p className="mt-3 text-gray-400">
+          Leading since 1974
+        </p>
+
+        <div className="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-red-600/10 group-hover:scale-150 transition duration-700"></div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+
+        <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+
+        <div className="w-12 h-12 rounded-2xl bg-gray-300 flex items-center justify-center text-3xl">
+          📍
+        </div>
+
+        <h3 className="mt-7 text-xl font-semibold">
+          Registered Address
+        </h3>
+
+        <p className="mt-4 text-2xl font-medium text-red-500">
+          Deoria-274001
+        </p>
+
+        <p className="mt-3 text-gray-400">
+          Uttar Pradesh, India
+        </p>
+
+        <div className="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-red-600/10 group-hover:scale-150 transition duration-700"></div>
+      </div>
+
+      {/* Card 4 */}
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+
+        <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+
+        <div className="w-12 h-12 rounded-2xl bg-gray-300 flex items-center justify-center text-3xl">
+          📊
+        </div>
+
+        <h3 className="mt-7 text-xl font-semibold">
+          Annual Turnover
+        </h3>
+
+        <p className="mt-4 text-2xl font-medium text-red-500">
+          ₹1.5 - 5 Cr
+        </p>
+
+        <p className="mt-3 text-gray-400">
+          GST Reg: 01-07-2017
+        </p>
+
+        <div className="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-red-600/10 group-hover:scale-150 transition duration-700"></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
       {/* ================= STATUTORY PROFILE ================= */}
-      <div className="py-16">
+      {/* <div className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl sm:text-5xl font-bold text-center  mb-12">Statutory Profile</h2>
 
@@ -185,10 +308,99 @@ export default function AboutUs() {
             />
           </div>
         </div>
+      </div> */}
+     <div className="bg-white py-12">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      {/* <span className="inline-block px-4 py-2 rounded-full bg-red-50 text-red-600 font-semibold text-sm uppercase tracking-wider border border-red-100">
+        Company Registration
+      </span> */}
+
+      <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
+        Statutory Profile
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
+        Our statutory registrations and banking details reflecting compliance,
+        transparency and business credibility.
+      </p>
+    </div>
+
+    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+
+      {/* Row 1 */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 border-b border-gray-200">
+
+        <div className="p-6 lg:border-r border-gray-200">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 text-xl">
+              📄
+            </div>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              Import Export Code
+            </p>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-900 break-all">
+            AADFC8544L
+          </h3>
+        </div>
+
+        <div className="p-6 lg:border-r border-gray-200">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 text-xl">
+              🔢
+            </div>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              TAN Number
+            </p>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-900">
+            ALDC0*****
+          </h3>
+        </div>
+
+        <div className="p-6 lg:border-r border-gray-200">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 text-xl">
+              🏦
+            </div>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              Banking Partner
+            </p>
+          </div>
+
+          <h3 className="text-xl font-bold text-gray-900">
+            ICICI Bank
+          </h3>
+        </div>
+
+        <div className="p-6">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center text-red-600 text-xl">
+              📋
+            </div>
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              GST Number
+            </p>
+          </div>
+
+          <h3 className="text-lg font-bold text-gray-900 break-all">
+            09AADFC8544L1Z1
+          </h3>
+        </div>
+
       </div>
 
+    </div>
+
+  </div>
+</div>
+
       {/* ================= COMPANY GALLERY - LIKE REFERENCE IMAGE ================= */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl sm:text-5xl font-bold text-center  mb-4">Company Gallery</h2>
           <p className="text-center text-gray-600 mb-8 text-lg">A glimpse into our facilities and operations</p>
@@ -245,74 +457,199 @@ export default function AboutUs() {
       </div>
 
       {/* ================= PACKAGING, PAYMENT & SHIPMENT ================= */}
-      <div className="py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Packaging, Payment & Shipment</h2>
+     <div className="py-12 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6">
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#1b3163]">
-              <div className="text-4xl mb-4">💳</div>
-              <h3 className="text-xl font-bold text-[#1b3163] mb-4">Payment Modes</h3>
-              <ul className="space-y-3">
-                {["Cash", "Cheque", "Credit Card"].map((mode, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    <span className="text-gray-700">{mode}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+    <div className="text-center mb-16">
+      {/* <span className="inline-flex items-center rounded-full bg-red-100 px-5 py-2 text-red-600 font-semibold tracking-widest uppercase text-sm">
+        Business Information
+      </span> */}
 
-            <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#1b3163]">
-              <div className="text-4xl mb-4">🚚</div>
-              <h3 className="text-xl font-bold text-[#1b3163] mb-4">Shipment Mode</h3>
-              <ul className="space-y-3">
-                {["By Road"].map((mode, index) => (
-                  <li key={index} className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                    <span className="text-gray-700">{mode}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
+        Packaging, Payment & Shipment
+      </h2>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-[#1b3163]">
-              <div className="text-4xl mb-4">📧</div>
-              <h3 className="text-xl font-bold mb-4 text-[#1b3163]">Quick Message</h3>
-              <p className="mb-6 text-gray-700">
-                Discuss more about your requirement by contacting us now
-              </p>
-              <Link href="/contact-us" className="hover:text-white transition"><button className="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-semibold w-full">
-                Contact Us
-              </button>
-              </Link>
-            </div>
-          </div>
+      <div className="w-24 h-1 bg-red-600 mx-auto mt-5 rounded-full"></div>
+
+      <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600">
+        We provide flexible payment options, secure logistics and dedicated
+        customer support for a seamless purchasing experience.
+      </p>
+    </div>
+
+    <div className="relative grid lg:grid-cols-3 gap-12">
+
+      {/* Connector Line */}
+      <div className="hidden lg:block absolute top-10 left-1/2 -translate-x-1/2 w-[75%] h-1 bg-red-600"></div>
+
+      {/* Payment */}
+      <div className="relative flex flex-col items-center text-center">
+
+        <div className="relative z-10 w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-5xl border-4 border-gray-400 transition duration-500 hover:scale-110">
+          💳
         </div>
-      </div>
 
-      {/* ================= WHY PICK US ================= */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12">Why Choose Us</h2>
+        <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 w-full border border-gray-200 hover:border-red-500 transition">
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "Competitive Prices", desc: "Best prices in the industry without quality compromise" },
-              { title: "High Quality", desc: "Strict quality tests for every product batch" },
-              { title: "Timely Delivery", desc: "Guaranteed on-time delivery across all shipments" },
-              { title: "Wide Network", desc: "Strong distribution network covering multiple countries" },
-            ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-xl transition relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-[#1b3163] rounded-bl-full opacity-10"></div>
-                <div className="text-3xl mb-3">⭐</div>
-                <h3 className="text-lg font-bold text-[#1b3163] mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Payment Modes
+          </h3>
+
+          <div className="space-y-4">
+
+            {["Cash","Cheque","Credit Card"].map((item,index)=>(
+              <div
+                key={index}
+                className="flex items-center justify-between rounded-xl bg-gray-100 px-5 py-3  transition"
+              >
+                <span className="font-medium text-gray-700">{item}</span>
+
+                <div className="w-3 h-3 rounded-full bg-red-600"></div>
               </div>
             ))}
+
           </div>
+
         </div>
+
       </div>
+
+      {/* Shipment */}
+
+      <div className="relative flex flex-col items-center text-center">
+
+        <div className="relative z-10 w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-5xl border-4 border-gray-400 transition duration-500 hover:scale-110">
+          🚚
+        </div>
+
+        <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 w-full border border-gray-200 hover:border-red-500 transition">
+
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Shipment Mode
+          </h3>
+
+          <div className="rounded-xl bg-gray-100 px-5 py-4 flex justify-between items-center  transition">
+
+            <span className="font-medium text-gray-700">
+              By Road Transport
+            </span>
+
+            <div className="w-3 h-3 rounded-full bg-red-600"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Contact */}
+
+      <div className="relative flex flex-col items-center text-center">
+
+        <div className="relative z-10 w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-5xl  border-4 border-gray-400 transition duration-500 hover:scale-110">
+          📞
+        </div>
+
+        <div className="mt-8 bg-white rounded-3xl shadow-xl p-8 w-full text-black relative overflow-hidden border border-gray-200 hover:border-red-600 ">
+
+          {/* <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-red-600/10 blur-2xl"></div> */}
+
+          <h3 className="text-2xl font-bold mb-5 relative z-10">
+            Need Assistance?
+          </h3>
+
+          <p className="text-gray-600 leading-7 mb-8 relative z-10">
+            Our team is available to discuss your packaging requirements,
+            payment options and shipment process.
+          </p>
+
+          <Link href="/contact-us">
+            <button className="relative z-10 w-full rounded-xl bg-gray-100 py-4 font-semibold text-lg transition duration-300 hover:text-red-600 hover:text-black">
+              Contact Our Team →
+            </button>
+          </Link>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+      {/* ================= WHY PICK US ================= */}
+   <div className="py-12 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="text-center mb-14">
+      {/* <span className="inline-block px-4 py-2 rounded-full bg-red-50 text-red-600 font-semibold text-sm uppercase tracking-wider border border-red-100">
+        Why Clients Trust Us
+      </span> */}
+
+      <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
+        Why Choose Us
+      </h2>
+
+      <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
+        We are committed to delivering quality products, dependable service,
+        and long-term business relationships through consistent performance.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 border border-gray-200 rounded-2xl overflow-hidden bg-white">
+
+      {[
+        {
+          number: "01",
+          title: "Competitive Prices",
+          desc: "Industry-leading pricing while maintaining high manufacturing standards."
+        },
+        {
+          number: "02",
+          title: "High Quality",
+          desc: "Every product is manufactured under strict quality control procedures."
+        },
+        {
+          number: "03",
+          title: "Timely Delivery",
+          desc: "Efficient production and logistics ensure deliveries on schedule."
+        },
+        {
+          number: "04",
+          title: "Wide Network",
+          desc: "Serving customers across multiple industries with reliable distribution."
+        }
+      ].map((item, index) => (
+
+        <div
+          key={index}
+          className={`relative p-8 transition-all duration-300 hover:bg-red-50 group
+          ${index !== 3 ? "lg:border-r border-gray-200" : ""}
+          ${index < 2 ? "md:border-b lg:border-b-0" : ""}`}
+        >
+
+          <div className="text-5xl font-extrabold text-gray-100 group-hover:text-red-100 transition">
+            {item.number}
+          </div>
+
+          <div className="w-12 h-1 bg-red-600 rounded-full mt-3 mb-6"></div>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            {item.title}
+          </h3>
+
+          <p className="text-gray-600 leading-7">
+            {item.desc}
+          </p>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+</div>
 
       {/* ================= LIGHTBOX MODAL ================= */}
       {selectedImage && (

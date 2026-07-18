@@ -1,5 +1,7 @@
 import exprees from "express";
 import dotenv from "dotenv";
+import dns from  "dns";
+dns.setServers(["0.0.0.0","1.1.1.1"]);
 
 dotenv.config();
 import cors from "cors";
