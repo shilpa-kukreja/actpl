@@ -20,7 +20,7 @@ const industries = [
 
 export default function IndustriesWeServe() {
   return (
-    <section className="py-10 bg-gray-200 relative overflow-hidden">
+    <section className="py-12 bg-gray-100 relative overflow-hidden">
 
       {/* Soft background accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gray-200 -z-10"></div>
@@ -58,7 +58,7 @@ export default function IndustriesWeServe() {
 
               {/* Icon */}
               <div className="w-14 h-14 flex items-center justify-center rounded-xl
-                              bg-gradient-to-r from-blue-50 to-indigo-50
+                              bg-gray-50
                               mb-4 transition">
 
                 <item.icon className="text-red-600" size={28} />

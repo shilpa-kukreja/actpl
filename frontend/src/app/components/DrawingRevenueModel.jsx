@@ -10,11 +10,11 @@ import {
 
 export default function DrawingRevenueModel() {
   return (
-    <section className="relative py-10 overflow-hidden bg-white text-gray-800">
+    <section className="relative py-12 overflow-hidden bg-gray-100 text-gray-800">
 
       {/* Soft Background Gradient */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[140px] opacity-40"></div>
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-100 rounded-full blur-[140px] opacity-40"></div>
+      {/* <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-[140px] opacity-40"></div> */}
+      {/* <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-100 rounded-full blur-[140px] opacity-40"></div> */}
 
       {/* Grid Overlay */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.04]"></div>
@@ -62,7 +62,7 @@ export default function DrawingRevenueModel() {
           {/* CENTER CARD */}
           <div className="relative group">
 
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 blur-xl opacity-20 group-hover:opacity-30 transition"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-100 blur-xl opacity-20 group-hover:opacity-30 transition"></div>
 
             <div className="relative bg-white border border-gray-200 shadow-xl rounded-3xl p-10 text-center">
 

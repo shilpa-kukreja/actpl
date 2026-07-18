@@ -129,6 +129,12 @@ export default function Navbar() {
               </Link>
             </li>
 
+              <li>
+              <Link href="/how-it-works" className={linkStyle("/industries")}>
+                How It Works
+              </Link>
+            </li>
+
             <li>
               <Link href="/contact-us" className={linkStyle("/contact-us")}>
                 Contact Us

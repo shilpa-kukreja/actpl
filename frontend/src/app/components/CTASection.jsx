@@ -9,11 +9,12 @@ import Link from "next/link";
 export default function CTASection() {
 
     const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   
 
   
   return (
-    <section className="py-10 bg-white relative overflow-hidden">
+    <section className="py-12 bg-gray-100 relative overflow-hidden">
 
       {/* Soft Background Accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-blue-50 blur-[120px] -z-10"></div>
@@ -59,20 +60,20 @@ export default function CTASection() {
               </Link>
 
               {/* Request Quote */}
-              <Link href="/request-quote">
+              
                 <button 
                  onClick={() => {
               setIsMenuOpen(false);
               setIsEnquiryOpen(true);
             }}
-                className="group border border-white px-2 sm:px-8 py-4 bg-gray-200 rounded-md font-semibold flex items-center gap-2  hover:text-blue-700 transition">
+                className="group border border-white px-2 sm:px-8 py-4 bg-gray-200 rounded-md font-semibold flex items-center gap-2  hover:text-red-600 transition">
                   Request Quote
                   <ArrowRight
                     size={18}
                     className="group-hover:translate-x-1 transition"
                   />
                 </button>
-              </Link>
+          
 
             </div>
           </div>

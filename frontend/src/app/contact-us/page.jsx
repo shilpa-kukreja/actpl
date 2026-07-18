@@ -108,18 +108,18 @@ export default function ContactPage() {
       <Navbar />
 
       <section className=" text-gray-800">
-           <section className="w-full">
+        <section className="w-full">
           <div className=" w-full">
-            <video
+            {/* <video
               src="/industries/video.mp4"
               alt="Eric AI CRA"
-
-        autoPlay
-        muted
-        loop
-        playsInline
+              autoPlay
+              muted
+              loop
+              playsInline
               className="w-full h-40 sm:h-90 object-cover"
-            />
+            /> */}
+            <img src="/contact/banner.jpg" alt="contact banner"/>
           </div>
         </section>
 
@@ -129,33 +129,44 @@ export default function ContactPage() {
           <div>
             <h2 className="text-3xl sm:text-5xl font-bold text-text mb-5">
               Get In Touch
+              <div className="w-24 h-1 bg-red-600 mt-4 rounded-full"></div>
             </h2>
 
-            <p className="text-gray-700 mb-12 text-justify max-w-md leading-relaxed">
+            {/* <p className="text-gray-700 mb-5 text-justify max-w-xl leading-relaxed ">
               We're here to answer your questions, discuss your requirements,
               and help you find the right writing solutions for your business.
-            </p>
+            </p> */}
 
-            <div className="space-y-10 ">
-              <InfoBox
+            <div className="space-y-7 ">
+              {/* <InfoBox
                 icon={<User size={20} />}
                 title="Contact Person"
-                value="Mr. Sanjeev Arora "
-              />
+                value="Mr. xxxxxxxxxxxx xxxxxxxxx "
+              /> */}
               <InfoBox
                 icon={<Mail size={20} />}
                 title="Email Address"
-                value="ajantadfpens@gmail.com"
+                value="aashish@actpl.co.in"
               />
               <InfoBox
                 icon={<Phone size={20} />}
                 title="Phone Number"
-                value="+91 08046047240"
+                value="+91 (022) 66751983 / 9821032805"
+              />
+               <InfoBox
+                icon={<Phone size={20} />}
+                title="Fax"
+                value="+91 (022) 66751986 "
               />
               <InfoBox
                 icon={<MapPin size={20} className="w-20 " />}
-                title="Office Address"
-                value="Chemicals And Allied Products, Gorakhpur Road, Industrial Area, Deoria - 274001, Uttar Pradesh, India"
+                title="Head Office"
+                value="Aashish Coating Technologies Pvt. Ltd. 140, Laxmi Plaza, # Bldg No 9, New Link Road, Andheri (W) Mumbai 400 053. Maharashtra"
+              />
+              <InfoBox
+                icon={<MapPin size={20} className="w-20 " />}
+                title="Factory & Technical Dept"
+                value="Aashish Coating Technologies Pvt. Ltd. 431, G.I.D.C. Industrial Estate Waghodia - 391 760, Dist - Baroda. Gujarat"
               />
             </div>
           </div>
@@ -281,18 +292,23 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 pb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Location
+                          <div className="w-24 h-1 bg-red-600 mx-auto mt-3 rounded-full"></div>
+
+            
           </h2>
 
           <div className="w-full h-[420px] rounded-md overflow-hidden border shadow-lg">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d449540.9092327916!2d77.360544!3d28.327441!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20no.%20101%2C%20Sector%2068%2C%20Faridabad%2C%20Haryana%20121004!5e0!3m2!1sen!2sus!4v1775305508737!5m2!1sen!2sus" width="100%"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d449540.9092327916!2d77.360544!3d28.327441!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20no.%20101%2C%20Sector%2068%2C%20Faridabad%2C%20Haryana%20121004!5e0!3m2!1sen!2sus!4v1775305508737!5m2!1sen!2sus"
+              width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location"></iframe>
-            
-            
+              title="Office Location"
+            ></iframe>
+
             {/* <iframe
               src="https://www.google.com/maps/search/Plot+no.+101,+Sector+68,+Faridabad,+Haryana+121004/@28.327441,77.360544,10z?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
               width="100%"

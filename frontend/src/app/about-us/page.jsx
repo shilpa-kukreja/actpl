@@ -45,7 +45,7 @@ export default function AboutUs() {
         <section className="w-full">
           <div className=" w-full">
             <img
-              src="/services/banner.png"
+              src="/about/banner.jpg"
               alt="Eric AI CRA"
               className="w-full h-full object-cover"
             />
@@ -59,6 +59,8 @@ export default function AboutUs() {
       <div className=" text-sm text-center">
         <div className="max-w-7xl mx-auto px-6">
           <span className="text-3xl sm:text-5xl font-bold ">About Us</span>
+                <div className="w-24 h-1 bg-red-600 mx-auto mt-3 rounded-full"></div>
+
         </div>
       </div>
 
@@ -112,7 +114,7 @@ export default function AboutUs() {
           <div className=" rounded-xl shadow-xl overflow-hidden">
             <div className="relative h-[500px] w-full">
               <img
-                src="/services/image2.png"
+                src="/about/image.jpg"
                 alt="CEO Sanjeev Arora"
                 className="object-cover object-top h-full w-full"
                 
@@ -180,7 +182,7 @@ export default function AboutUs() {
     <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
       {/* Card 1 */}
-      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 ">
 
         <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
 
@@ -204,7 +206,7 @@ export default function AboutUs() {
       </div>
 
       {/* Card 2 */}
-      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3">
 
         <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
 
@@ -228,7 +230,7 @@ export default function AboutUs() {
       </div>
 
       {/* Card 3 */}
-      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 ">
 
         <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
 
@@ -252,7 +254,7 @@ export default function AboutUs() {
       </div>
 
       {/* Card 4 */}
-      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(220,38,38,0.35)]">
+      <div className="group relative overflow-hidden rounded-3xl bg-white text-black p-8 transition-all duration-500 hover:-translate-y-3 ">
 
         <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
 
@@ -320,6 +322,8 @@ export default function AboutUs() {
       <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
         Statutory Profile
       </h2>
+            <div className="w-24 h-1 bg-red-600 mx-auto mt-5 rounded-full"></div>
+
 
       <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
         Our statutory registrations and banking details reflecting compliance,
@@ -403,7 +407,9 @@ export default function AboutUs() {
       <div className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl sm:text-5xl font-bold text-center  mb-4">Company Gallery</h2>
-          <p className="text-center text-gray-600 mb-8 text-lg">A glimpse into our facilities and operations</p>
+                <div className="w-24 h-1 bg-red-600 mx-auto mt-3 rounded-full"></div>
+
+          <p className="text-center text-gray-600 mb-8 text-lg mt-2">A glimpse into our facilities and operations</p>
 
           {/* Category Filter */}
           <div className="flex flex-wrap gap-3 justify-center mb-10">
@@ -589,6 +595,8 @@ export default function AboutUs() {
       <h2 className="mt-5 text-4xl md:text-5xl font-bold text-gray-900">
         Why Choose Us
       </h2>
+            <div className="w-24 h-1 bg-red-600 mx-auto mt-3 rounded-full"></div>
+
 
       <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg">
         We are committed to delivering quality products, dependable service,

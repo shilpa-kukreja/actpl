@@ -7,21 +7,68 @@ import { useRouter } from "next/navigation";
 import { Link } from "lucide-react";
 
 export default function Home() {
-
   const router = useRouter();
   const services = [
-    { title: "Dismantle", color: "from-blue-50 to-blue-100", image: "/services/service/s1.png" },
-    { title: "Punch Mark", color: "from-purple-50 to-purple-100", image: "/services/service/s2.png" },
-    { title: "De-grease", color: "from-green-50 to-green-100", image: "/services/service/s3.png" },
-    { title: "Sandblast", color: "from-cyan-50 to-cyan-100", image: "/services/service/s4.png" },
-    { title: "Non-visual Cracks", color: "from-yellow-50 to-yellow-100", image: "/services/service/s2.png" },
-    { title: "Replace", color: "from-orange-50 to-orange-100", image: "/services/service/s1.png" },
-    { title: "Inspection Report", color: "from-pink-50 to-pink-100", image: "/services/service/s3.png" },
-    { title: "Machine, griding and Lapping", color: "from-indigo-50 to-indigo-100", image: "/services/service/s4.png" },
-    { title: "Flatness Check ", color: "from-red-50 to-red-100", image: "/services/service/s4.png" },
-    { title: "Assemble", color: "from-teal-50 to-teal-100", image: "/services/service/s3.png" },
-    { title: "Pneumatic Pressure Test", color: "from-sky-50 to-sky-100", image: "/services/service/s2.png" },
-    { title: "Pack and Deliver", color: "from-rose-50 to-rose-100", image: "/services/service/s1.png" },
+    {
+      title: "Dismantle",
+      color: "from-blue-50 to-blue-100",
+      image: "/servicepage/capabilities/Dismantle.jpg",
+    },
+    {
+      title: "Punch Mark",
+      color: "from-purple-50 to-purple-100",
+      image: "/servicepage/capabilities/Punch Mark.jpg",
+    },
+    {
+      title: "De-grease",
+      color: "from-green-50 to-green-100",
+      image: "/servicepage/capabilities/De-grease.jpg",
+    },
+    {
+      title: "Sandblast",
+      color: "from-cyan-50 to-cyan-100",
+      image: "/servicepage/capabilities/Sandblast.jpg",
+    },
+    {
+      title: "Non-visual Cracks",
+      color: "from-yellow-50 to-yellow-100",
+      image: "/servicepage/capabilities/Non-visual Cracks.jpg",
+    },
+    {
+      title: "Replace",
+      color: "from-orange-50 to-orange-100",
+      image: "/servicepage/capabilities/Replace.jpg",
+    },
+    {
+      title: "Inspection Report",
+      color: "from-pink-50 to-pink-100",
+      image: "/servicepage/capabilities/Inspection Report.jpg",
+    },
+    {
+      title: "Machine, griding and Lapping",
+      color: "from-indigo-50 to-indigo-100",
+      image: "/servicepage/capabilities/Machine, griding and Lapping.jpg",
+    },
+    {
+      title: "Flatness Check ",
+      color: "from-red-50 to-red-100",
+      image: "/servicepage/capabilities/Flatness Check.jpg",
+    },
+    {
+      title: "Assemble",
+      color: "from-teal-50 to-teal-100",
+      image: "/servicepage/capabilities/Assemble.jpg",
+    },
+    {
+      title: "Pneumatic Pressure Test",
+      color: "from-sky-50 to-sky-100",
+      image: "/servicepage/capabilities/Pneumatic Pressure Test.jpg",
+    },
+    {
+      title: "Pack and Deliver",
+      color: "from-rose-50 to-rose-100",
+      image: "/servicepage/capabilities/Pack and Deliver.jpg",
+    },
   ];
 
   const steps = [
@@ -32,7 +79,6 @@ export default function Home() {
     { title: "Delivery", color: "bg-pink-50 border-pink-200" },
   ];
 
-
   return (
     <>
       <Navbar />
@@ -40,19 +86,19 @@ export default function Home() {
       {/* ================= HERO IMAGE ================= */}
       <section className="w-full">
         <div className=" w-full ">
-          <video
+          {/* <video
             src="/services/video.mp4"
             alt="Eric AI CRA"
-
             autoPlay
             muted
             loop
             playsInline
             className="w-full h-40 sm:h-90 object-cover"
-          />
+          /> */}
+          <img src="/servicepage/banner.jpg" alt="banner"/>
         </div>
       </section>
-      <div className="bg-gray-50 text-gray-800">
+      <div className="bg-white text-gray-800">
         {/* HERO SECTION */}
         <section className="relative bg-white">
           <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
@@ -65,21 +111,17 @@ export default function Home() {
                 superior quality and precision engineering.
               </p>
 
-              
-              
-              <button 
-              onClick={() => router.push("/contact-us")}
-              className="mt-8 px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-800 transition">
+              <button
+                onClick={() => router.push("/contact-us")}
+                className="mt-8 px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-800 transition"
+              >
                 Get Started
               </button>
-
-
-              
             </div>
 
             <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/services/image3.png"
+                src="/servicepage/image.jpg"
                 alt="Engineering"
                 fill
                 className="object-cover"
@@ -89,7 +131,7 @@ export default function Home() {
         </section>
 
         {/* PRODUCT SHOWCASE */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
+        {/* <section className="max-w-7xl mx-auto px-6 py-12">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <Image
@@ -111,14 +153,14 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* SERVICES GRID */}
-        <section className="py-12 bg-gray-50">
+        <section id="capabilities" className="py-12 bg-gray-50" >
           <div className="max-w-7xl mx-auto px-6">
-
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-14">
               Our Capabilities
+              <div className="w-24 h-1 bg-red-600 mx-auto mt-4 rounded-full"></div>
             </h2>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -127,31 +169,25 @@ export default function Home() {
                   key={index}
                   className={`rounded-2xl overflow-hidden bg-gradient-to-br ${service.color} p-[1px]`}
                 >
-                  <div className="bg-white rounded-2xl h-full shadow-sm hover:shadow-2xl transition duration-300 group flex flex-col">
-
-                    {/* IMAGE (TOP HALF) */}
+                  <div className="bg-white rounded-2xl h-full group flex flex-col shadow-md transition-all duration-300 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(220,38,38,0.18)]">
                     <div className="relative h-40 w-full overflow-hidden">
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover group-hover:scale-110 transition duration-300"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
 
-                    {/* CONTENT (BOTTOM HALF) */}
-                    <div className="p-5 flex flex-col justify-between flex-1">
-                      <div>
-                        <h3 className="font-semibold text-lg text-gray-800 group-hover:text-black">
-                          {service.title}
-                        </h3>
+                    <div className="p-5 flex flex-col flex-1">
+                      <h3 className="font-semibold text-lg text-gray-800 transition-colors duration-300 group-hover:text-red-600">
+                        {service.title}
+                      </h3>
 
-                        <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-                          High-quality engineering with precision and reliability.
-                        </p>
-                      </div>
+                      <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                        High-quality engineering with precision and reliability.
+                      </p>
                     </div>
-
                   </div>
                 </div>
               ))}
@@ -160,13 +196,14 @@ export default function Home() {
         </section>
 
         {/* PROCESS / TIMELINE */}
-        <section className="bg-gradient-to-b from-white to-gray-50 py-24">
+        <section id="process" className=" bg-white py-24">
           <div className="max-w-5xl mx-auto px-6">
-
             {/* Heading */}
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
                 Our Process
+                                                      <div className="w-24 h-1 bg-red-600 mx-auto mt-4 rounded-full"></div>
+
               </h2>
               <p className="text-gray-500 mt-4 text-md sm:text-lg">
                 A structured and efficient workflow from concept to delivery
@@ -175,7 +212,6 @@ export default function Home() {
 
             {/* Timeline Container */}
             <div className="relative">
-
               {/* Center Line */}
               <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[3px] h-full bg-gradient-to-b from-gray-200 via-gray-300 to-gray-200"></div>
 
@@ -183,10 +219,10 @@ export default function Home() {
                 {steps.map((step, i) => (
                   <div
                     key={i}
-                    className={`relative flex items-center ${i % 2 === 0 ? "justify-start" : "justify-end"
-                      }`}
+                    className={`relative flex items-center ${
+                      i % 2 === 0 ? "justify-start" : "justify-end"
+                    }`}
                   >
-
                     {/* Card */}
                     <div
                       className={`w-[45%] p-6 rounded-2xl border ${step.color} 
@@ -196,7 +232,8 @@ export default function Home() {
                         {step.title}
                       </h3>
                       <p className="text-sm text-gray-500 mt-2">
-                        Precision-driven execution ensuring quality and reliability.
+                        Precision-driven execution ensuring quality and
+                        reliability.
                       </p>
                     </div>
 
@@ -209,22 +246,19 @@ export default function Home() {
 
                     {/* Connector Line */}
                     <div
-                      className={`absolute top-1/2 w-[50px] h-[2px] bg-gray-300 ${i % 2 === 0
-                          ? "left-1/2"
-                          : "right-1/2"
-                        }`}
+                      className={`absolute top-1/2 w-[50px] h-[2px] bg-gray-300 ${
+                        i % 2 === 0 ? "left-1/2" : "right-1/2"
+                      }`}
                     ></div>
-
                   </div>
                 ))}
               </div>
             </div>
-
           </div>
         </section>
 
         {/* TESTIMONIAL / QUOTE */}
-        <section className="bg-blue-300 text-white py-16">
+        <section className="bg-gray-200 text-red-600 py-16">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-xl italic">
               “Get your perfect solution with professional engineering and

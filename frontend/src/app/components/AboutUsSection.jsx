@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function AboutUs() {
   return (
-    <section className="py-10 px-4 md:px-8 lg:px-16 ">
+    <section className="py-12 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left Content Section */}
@@ -57,11 +58,14 @@ shadow-lg
 transition-all duration-300 hover:scale-105"
               >
                 {/* CONTENT */}
-                <div className="relative flex items-center justify-center space-x-3">
+                <Link href="/about-us">
+                 <div className="relative flex items-center justify-center space-x-3">
                   <span className="font-bold capitalize text-white tracking-wide">
                     LERN MORE
                   </span>
                 </div>
+                </Link>
+               
               </button>
             </div>
 
@@ -93,15 +97,15 @@ transition-all duration-300 hover:scale-105"
             {/* Main Image Container */}
             <div className="relative">
               {/* Decorative elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-golden/20 to-yellow-400/10 rounded-2xl -z-10"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-golden/10 to-amber-500/5 rounded-3xl -z-10"></div>
+              {/* <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-golden/20 to-yellow-400/10 rounded-2xl -z-10"></div> */}
+              {/* <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-golden/10 to-amber-500/5 rounded-3xl -z-10"></div> */}
 
               {/* Main Image */}
               <div className="relative rounded-xl overflow-hidden shadow-2xl">
                 <div className="aspect-[5/5] w-full bg-gradient-to-br from-gray-900 to-gray-800 relative">
                   {/* Placeholder image - Replace with actual image */}
                   <img
-                    src="/services/image3.png"
+                    src="/home/about.jpg"
                     alt="Main Image"
                     className="w-full h-full object-cover"
                   />

@@ -1,16 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProblemSolution() {
   return (
     <section className="py-20 ">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
         {/* Image Side */}
         <div className="relative w-full h-[400px] md:h-[500px]">
           <Image
-            src="/problem.webp"   // 👉 change to your image
+            src="/home/challenges.jpg" // 👉 change to your image
             alt="Industrial Solution"
             fill
             className="object-cover rounded-2xl shadow-2xl"
@@ -38,7 +38,11 @@ export default function ProblemSolution() {
 
           <p className="mt-6 text-lg font-medium text-gray-800">
             These challenges directly impact your
-            <span className="text-red-600"> productivity, profitability</span> and
+            <span className="text-red-600">
+              {" "}
+              productivity, profitability
+            </span>{" "}
+            and
             <span className="text-red-600"> operational reliability.</span>
           </p>
 
@@ -46,11 +50,12 @@ export default function ProblemSolution() {
             ACTPL provides a permanent & cost-effective solution.
           </p>
 
-          <button className="mt-8 bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition">
-            Get a Solution →
-          </button>
+          <Link href={"/contact-us"}>
+            <button className="mt-8 bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-black transition">
+              Get a Solution →
+            </button>
+          </Link>
         </div>
-
       </div>
     </section>
   );

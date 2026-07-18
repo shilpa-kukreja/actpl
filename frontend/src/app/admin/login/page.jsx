@@ -64,7 +64,7 @@ export default function AdminLogin() {
           </div>
 
           <div className="text-sm text-slate-400">
-            © {new Date().getFullYear()} Chemicals Allied
+            © {new Date().getFullYear()} ACTPL
           </div>
         </div>
 
@@ -76,9 +76,9 @@ export default function AdminLogin() {
             <div className="flex justify-center mb-8">
               <Link href="/">
                 <img
-                  src="https://5.imimg.com/data5/UM/WQ/MY-4137588/chemical-90x90.jpg"
+                  src="/logo.png"
                   alt="logo"
-                  className="h-16 w-16 object-contain"
+                  className="h-20 w-30 object-contain"
                 />
               </Link>
             </div>

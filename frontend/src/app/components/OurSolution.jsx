@@ -41,7 +41,7 @@ export default function OurSolution() {
     <section className="relative py-12 bg-gray-100 text-gray-900 overflow-hidden">
 
       {/* Soft Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-200 opacity-30 blur-[140px]"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 

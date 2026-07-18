@@ -25,7 +25,7 @@ const page = () => {
        <ProblemSolution/>
        <OurSolution/>
        <WhyACTPL/>
-       <ParallaxSection img="/services/banner.png"/>
+       <ParallaxSection img="/imageparallex/1.jpg"/>
        {/* <Bannerimg/> */}
        <DrawingRevenueModel/>
        <AboutUsSection/>

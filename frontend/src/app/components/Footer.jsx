@@ -180,7 +180,7 @@
 //         <a
 //           href="tel:+971526806400"
 //           aria-label="Call Us"
-//           className="group relative flex h-14 w-14 items-center justify-center rounded-full 
+//           className="group relative flex h-14 w-14 items-center justify-center rounded-full
 //     bg-[#1b3163] shadow-[0_12px_30px_rgba(27,49,99,0.35)]
 //     transition-all duration-300 hover:scale-110"
 //         >
@@ -196,7 +196,7 @@
 //         <a
 //           href="https://wa.me/971526806400?text=Hello%20Insight%20Integrators,%20I%20would%20like%20to%20discuss%20compliance%20advisory."
 //           aria-label="WhatsApp"
-//           className="group relative flex h-14 w-14 items-center justify-center rounded-full 
+//           className="group relative flex h-14 w-14 items-center justify-center rounded-full
 //     bg-[#25d366] shadow-[0_12px_30px_rgba(37,211,102,0.35)]
 //     transition-all duration-300 hover:scale-110"
 //         >
@@ -220,13 +220,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Plus,
-  Minus,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Plus, Minus,Printer } from "lucide-react";
 import { categories } from "../../../utils/assets";
 
 export default function Footer() {
@@ -244,6 +238,18 @@ export default function Footer() {
     { name: "Industries", href: "/industries" },
     { name: "Contact Us", href: "/contact-us" },
     // { name: "Privacy Policy", href: "/privacy-policy" },
+  ];
+
+  const services = [
+    {
+      name: "Privacy Policy",
+      href: "/privacy-policy",
+    },
+    // {
+    //   name: "Our Process",
+    //   href: "/services#process",
+    // },
+    
   ];
 
   const SectionHeader = ({ title, id }) => (
@@ -265,20 +271,22 @@ export default function Footer() {
 
   return (
     <footer className="bg-gradient-to-b from-[#0c0c0c] to-black text-gray-300">
-
       {/* ================= MAIN FOOTER ================= */}
       <div className="max-w-7xl mx-auto px-6 py-10 grid gap-10 lg:grid-cols-4">
-
         {/* ABOUT */}
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="w-[230px]">
+          <img src="/logo.png" alt="actpl logo" className="mb-2 w-35"/>
+          {/* <h3 className="text-2xl font-medium text-white mb-4">
             AIRPACK COMPRESSOR TECHNOLOGIES
-          </h3>
-          <p className="text-sm text-gray-400 mb-6">
-AIRPACK manufactures and supplies ultimate Quality replacement Spares for all types of Compressors. With an experience of 45 years, our technocrats have achieved customer satisfaction consistently all along.          </p>
+          </h3> */}
+          <p className="text-sm text-gray-400 mb-6 text-justify">
+            AIRPACK manufactures and supplies ultimate Quality replacement
+            Spares for all types of Compressors. With an experience of 45 years,
+            our technocrats have achieved customer satisfaction consistently all
+            along.{" "}
+          </p>
 
           <div className="flex gap-5 mt-4 text-2xl">
-
             <span className="cursor-pointer text-[#1877F2] hover:scale-110 transition">
               <FaFacebook />
             </span>
@@ -294,7 +302,6 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
             <span className="cursor-pointer text-white hover:scale-110 transition">
               <FaSquareXTwitter />
             </span>
-
           </div>
         </div>
 
@@ -303,10 +310,11 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
           <SectionHeader title="Quick Links" id="quick" />
 
           <div
-            className={`overflow-hidden transition-all duration-500 ${openSection === "quick"
+            className={`overflow-hidden transition-all duration-500 ${
+              openSection === "quick"
                 ? "max-h-[500px] opacity-100 mt-5"
                 : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
-              }`}
+            }`}
           >
             <ul className="space-y-3 text-sm ">
               {quickLinks.map((item) => (
@@ -322,22 +330,23 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
 
         {/* PRODUCTS */}
         <div>
-          <SectionHeader title="Our Services" id="products" />
+          <SectionHeader title="Legal"/>
 
           <div
-            className={`overflow-hidden transition-all duration-500 ${openSection === "products"
+            className={`overflow-hidden transition-all duration-500 ${
+              openSection === "products"
                 ? "max-h-[500px] opacity-100 mt-5"
                 : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
-              }`}
+            }`}
           >
             <div className="space-y-3 text-sm">
-              {categories.map((cat) => (
+              {services.map((service) => (
                 <Link
-                  key={cat.id}
-                  href={`/category/${cat.slug}`}
-                  className="block hover:text-red-600"
+                  key={service.name}
+                  href={service.href}
+                  className="block hover:text-red-600 transition"
                 >
-                  {cat.name}
+                  {service.name}
                 </Link>
               ))}
             </div>
@@ -349,31 +358,34 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
           <SectionHeader title="Contact Us" id="contact" />
 
           <div
-            className={`overflow-hidden transition-all duration-500 ${openSection === "contact"
+            className={`overflow-hidden transition-all duration-500 ${
+              openSection === "contact"
                 ? "max-h-[500px] opacity-100 mt-5"
                 : "max-h-0 opacity-0 lg:max-h-full lg:opacity-100 lg:mt-5"
-              }`}
+            }`}
           >
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex gap-3">
-                <Mail size={18} /> sales@airpackcompressor.com
+                <Mail size={18} /> aashish@actpl.co.in
               </li>
               <li className="flex gap-3">
-                <Phone size={16} /> +91 1126389999
+                <Phone size={16} /> +91 (022) 66751983 / 9821032805
               </li>
               <li className="flex gap-3">
-                <MapPin size={30} />  59 DSIDC SHED scheme 1,  Okhla Industrial Area Phase II, New Delhi - 110020, INDIA
+                <Printer size={18} /> +91 (022) 66751986 
+              </li>
+              <li className="flex gap-3">
+                <MapPin size={50} />Aashish Coating Technologies Pvt. Ltd. 140, Laxmi Plaza, # Bldg No 9, New Link Road, Andheri (W) Mumbai 400 053. Maharashtra
               </li>
             </ul>
           </div>
         </div>
-
-
       </div>
       {/* ================= COPYRIGHT ================= */}
       <div className="border-t border-white/10 bg-black">
         <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-          © 2026 ACTPL Reverse Engineering Services Pvt. Ltd. All Rights Reserved.
+          © 2026 ACTPL Reverse Engineering Services Pvt. Ltd. All Rights
+          Reserved.
           {/* <span className="block mt-1 text-red-500">
             Website Designed by Recreators design and media pvt. ltd.
           </span> */}
@@ -381,7 +393,6 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
       </div>
 
       <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-4">
-
         {/* CALL BUTTON */}
         <a
           href="tel:+91 11 26389999"
@@ -400,22 +411,23 @@ AIRPACK manufactures and supplies ultimate Quality replacement Spares for all ty
 
         {/* WHATSAPP BUTTON */}
         <a
-          href="https://wa.me/911126389999?text=Hello%20Insight%20Integrators,%20I%20would%20like%20to%20discuss%20compliance%20advisory."
-          aria-label="WhatsApp"
-          className="group relative flex h-14 w-14 items-center justify-center rounded-full 
-     bg-[#25d366] shadow-[0_12px_30px_rgba(37,211,102,0.35)]
-     transition-all duration-300 hover:scale-110"
-        >
-          <span className="absolute inset-0 rounded-full animate-ping bg-[#25d366]/30"></span>
-          <img
-            src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png"
-            alt="whatsapp"
-            className="relative w-5 h-5"
-          />
-        </a>
+  href="https://wa.me/911126389999?text=Hello%20ACTPL,%20I%20would%20like%20to%20know%20more%20about%20your%20reverse%20engineering%20services."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WhatsApp"
+  className="group relative flex h-14 w-14 items-center justify-center rounded-full 
+  bg-[#25d366] shadow-[0_12px_30px_rgba(37,211,102,0.35)]
+  transition-all duration-300 hover:scale-110"
+>
+  <span className="absolute inset-0 rounded-full animate-ping bg-[#25d366]/30"></span>
 
+  <img
+    src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png"
+    alt="WhatsApp"
+    className="relative w-5 h-5"
+  />
+</a>
       </div>
     </footer>
   );
 }
-
