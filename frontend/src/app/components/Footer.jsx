@@ -366,16 +366,16 @@ export default function Footer() {
           >
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex gap-3">
-                <Mail size={18} /> aashish@actpl.co.in
+                <Mail size={18} /> sales@airpackcompressor.com
               </li>
               <li className="flex gap-3">
-                <Phone size={16} /> +91 (022) 66751983 / 9821032805
+                <Phone size={16} /> +91 9810009207
               </li>
               <li className="flex gap-3">
-                <Printer size={18} /> +91 (022) 66751986 
+                <Phone size={18} /> +91 8130622229
               </li>
               <li className="flex gap-3">
-                <MapPin size={50} />Aashish Coating Technologies Pvt. Ltd. 140, Laxmi Plaza, # Bldg No 9, New Link Road, Andheri (W) Mumbai 400 053. Maharashtra
+                <MapPin size={50} />59 DSIDC SHED scheme 1,  Okhla Industrial Area Phase II, New Delhi - 110020, INDIA
               </li>
             </ul>
           </div>
