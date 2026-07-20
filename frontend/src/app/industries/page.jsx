@@ -4,66 +4,60 @@ import Footer from "../components/Footer";
 
 const industries = [
   {
-    title: "Railway",
-    img: "/industries/industry/railway.webp",
+    title: "Natural Gas Gathering",
+    img: "/industries/industry/naturalgas.jpeg",
     desc: "Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Metal",
-    img: "/industries/industry/metal.webp",
+    title: "Liquified Natural Gas",
+    img: "/industries/industry/liquidfiednaturalgas.jpeg",
     desc: "Built to withstand pressure and environment in oil and gas operations.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Cement Manufacturing",
-    img: "/industries/industry/cement_manufacturing.webp",
+    title: "Biogas Renewable Natural Gas",
+    img: "/industries/industry/biogas.jpeg",
     desc: "Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Mining",
-    img: "/industries/industry/mining.webp",
+    title: "Chemical Processing ",
+    img: "/industries/industry/chemicalprocessing.jpeg",
     desc: "Digging for natural resources while providing safety and reliability.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Pharmaceutical",
+    title: "Marine",
     img: "/industries/industry/pharmaceutical.webp",
     desc: "Precision processes require purity and reliability.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Bottle",
-    img: "/industries/industry/bottle.webp",
+    title: "P.E.T. Bottle Blowing",
+    img: "/industries/industry/pet.jpeg",
     desc: "Manufacturing plastic products involves precision and consistency.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Refinery",
-    img: "/industries/industry/refinery.webp",
+    title: "Compressed Natural Gas (CNG)",
+    img: "/industries/industry/cng.jpeg",
     desc: "Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Medical",
+    title: "Pipeline Transmission Industry",
     img: "/industries/industry/medical.webp",
     desc: "Clean, high-quality machinery is vital to the medical field.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Wood",
+    title: "Petrochemical Processing",
     img: "/industries/industry/wood.webp",
     desc: "Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Machine",
+    title: "Hydrozen",
     img: "/industries/industry/machine.webp",
     desc: "Manufacturers rely on compressed air for efficiency.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
-    title: "Car",
+    title: "Oxygen",
     img: "/industries/industry/car.webp",
     desc: "Compressed air systems optimize production in the auto industry.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
- 
-  
-  
-  
-  
-
 ];
 
 export default function IndustriesPage() {
