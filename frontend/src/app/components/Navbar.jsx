@@ -130,7 +130,7 @@ export default function Navbar() {
             </li>
 
               <li>
-              <Link href="/how-it-works" className={linkStyle("/industries")}>
+              <Link href="/how-it-works" className={linkStyle("/how-it-works")}>
                 How It Works
               </Link>
             </li>
@@ -225,6 +225,14 @@ export default function Navbar() {
             className="border-b pb-2"
           >
             Company Profile
+          </Link>
+
+           <Link
+            href="/how-it-works"
+            onClick={() => setIsMenuOpen(false)}
+            className="border-b pb-2"
+          >
+            How It Works
           </Link>
 
           <Link

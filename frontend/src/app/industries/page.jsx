@@ -25,7 +25,7 @@ const industries = [
   },
   {
     title: "Marine",
-    img: "/industries/industry/pharmaceutical.webp",
+    img: "/industries/industry/Marine.jpg",
     desc: "Precision processes require purity and reliability.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
@@ -40,22 +40,22 @@ const industries = [
   },
   {
     title: "Pipeline Transmission Industry",
-    img: "/industries/industry/medical.webp",
+    img: "/industries/industry/Pipeline Transmission Industry.jpg",
     desc: "Clean, high-quality machinery is vital to the medical field.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
     title: "Petrochemical Processing",
-    img: "/industries/industry/wood.webp",
+    img: "/industries/industry/Petrochemical Processing.jpg",
     desc: "Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
     title: "Hydrozen",
-    img: "/industries/industry/machine.webp",
+    img: "/industries/industry/Hydrozen.jpg",
     desc: "Manufacturers rely on compressed air for efficiency.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
   {
     title: "Oxygen",
-    img: "/industries/industry/car.webp",
+    img: "/industries/industry/Oxygen.jpg",
     desc: "Compressed air systems optimize production in the auto industry.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation.Whether you are a train passenger or a shipper of interstate cargo, you both expect smooth transportation."
   },
 ];

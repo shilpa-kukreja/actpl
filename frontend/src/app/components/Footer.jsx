@@ -234,7 +234,7 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/services" },
-    // { name: "How It Works", href: "/how-it-works" },
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Industries", href: "/industries" },
     { name: "Contact Us", href: "/contact-us" },
     // { name: "Privacy Policy", href: "/privacy-policy" },

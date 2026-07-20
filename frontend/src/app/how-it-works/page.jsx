@@ -52,7 +52,7 @@ const HowItWorks = () => {
               playsInline
               className="w-full h-40 sm:h-90 object-cover"
             /> */}
-            <img src="/contact/banner.jpg" alt="contact banner"/>
+            <img src="/howitworks/banner.jpg" alt="how it works banner"/>
           </div>
         </section>
 
